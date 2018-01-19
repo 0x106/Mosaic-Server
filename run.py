@@ -1,32 +1,46 @@
 import argparse
+import sys, os, math, time
 
+def checkDefaults(args):
+    if args.google:
+        args.url = "http://google.co.nz/"
+        args.outfile = "snapshot-google.json"
 
-def convertFile(fname):
-    with open(fname, 'r') as file_:
-        text = file_.read()
+    if args.jordan:
+        args.url = "https://murmuring-ocean-82758.herokuapp.com/"
+        args.outfile = "snapshot-82758.json"
 
-        text = text.replace("nodeName", "\"nodeName\"")
-        text = text.replace("nodeValue", "\"nodeValue\"")
-        text = text.replace("nodeLayout", "\"nodeLayout\"")
-        text = text.replace("x:", "\"x\":")
-        text = text.replace("y:", "\"y\":")
-        text = text.replace("width:", "\"width\":")
-        text = text.replace("height:", "\"height\":")
-        text = text.replace("\'", "\"")
+    if args.google:
+        args.url = "http://localhost:3000/"
+        args.outfile = "snapshot-localhost.json"
 
-    with open(fname, 'w') as file_:
-        file_.write(text)
+def initParser():
+    parser = argparse.ArgumentParser(description='Parse a specified URL and send to the Atlas Client.')
 
-
-if __name__ == '__main__':
-    parser = argparse.ArgumentParser(description='Modify JSON output so it\'s suitable for ingestion by the Atlas client.')
-
-    parser.add_argument('url', action = 'store', type = str, help = 'The text to parse.' )
-    parser.add_argument('outname', action = 'store', type = str, help = 'The text to parse.' )
+    parser.add_argument('--url', action = 'store', type = str, help = 'The url to parse.', default = "http://google.co.nz/")
+    parser.add_argument('--outfile', action = 'store', type = str, help = 'Output file to save the render tree.', default="snapshot.json")
+    parser.add_argument('--google', action = 'store_true', help = 'Google default option', default = False)
+    parser.add_argument('--localhost', action = 'store_true', help = 'localhost default option', default = False)
+    parser.add_argument('--jordan', action = 'store_true', help = 'jordan default option', default = False)
+    parser.add_argument('--debug', action = 'store_true', help = 'debug switch', default = False)
 
     args = parser.parse_args()
 
-    
+    checkDefaults(args)
 
-    outname = args.fname
-    convertFile(outname)
+    return args
+
+if __name__ == '__main__':
+    args = initParser()
+
+    # ensure that the output file exists
+    os.system("touch " + args.outfile)
+
+    # run the parsing engine
+    os.system("node dev.js --url " + args.url + " --outfile " + args.outfile)
+
+    # show the results
+    if args.debug:
+        os.system("open " + args.outfile)
+
+    print("Complete. Goodbye")
