@@ -12,6 +12,6 @@ a {
   height: 100px;
   border-style: solid;
   border-width: 2px;
-  color: green;
+  border-color: green;
   background-color: blue;
 }
