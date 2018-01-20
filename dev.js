@@ -51,14 +51,7 @@ let parse = function(snapshot) {
 
 var createStyleWhiteList = function() {
 
-  let computedStylesColor = ['color', 'background-color', 'border-color'];
-  let computedStylesBorder = ['border-width'];
-  let computedStyles = [];
-
-  // ensure that any more style lists we create are added to computedStyles
-
-  computedStyles = computedStyles.concat(computedStylesColor);
-  computedStyles = computedStyles.concat(computedStylesBorder);
+  let computedStyles = ['color', 'background-color', 'border-color', 'border-width', 'font-size'];
 
   if (argv.debug) {
     console.log(computedStyles);
