@@ -23,7 +23,7 @@ def initCMDParser():
 
     parser.add_argument('--url', action = 'store', type = str, help = 'The url to parse.', default = "http://google.co.nz/")
     parser.add_argument('--outfile', action = 'store', type = str, help = 'Output file to save the render tree.', default="snapshot.json")
-    parser.add_argument('--clientdir', action = 'store', type = str, help = 'Atlas Client dir', default="/Users/jordancampbell/helix/Atlas/Bolt/app/Bolt/Bolt/")
+    parser.add_argument('--clientdir', action = 'store', type = str, help = 'Atlas Client dir', default="/Users/jordancampbell/helix/Atlas/Mosaic-Client/Bolt/Bolt/")
     parser.add_argument('--google', action = 'store_true', help = 'Google default option', default = False)
     parser.add_argument('--local', action = 'store_true', help = 'localhost default option', default = False)
     parser.add_argument('--jordan', action = 'store_true', help = 'jordan default option', default = False)
