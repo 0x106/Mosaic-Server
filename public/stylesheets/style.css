@@ -8,10 +8,36 @@ a {
 }
 
 .box {
-  margin-top: 20px;
-  height: 100px;
+  display: inline;
+  /* height: 100px; */
+  /* border-style: solid; */
+  /* border-width: 2px; */
+  /* border-color: green; */
+  /* background-color: blue; */
+  /* padding-top: 20px; */
+}
+
+.box2 {
+  padding-bottom: 20px;
+  /* padding-left: 100px; */
+  padding-top: 40px;
+  padding-right: 40px;
+  height: 80;
   border-style: solid;
   border-width: 2px;
   border-color: green;
-  background-color: blue;
+}
+
+
+.box3 {
+  border-bottom-width: 0px;
+  padding-bottom: 20px;
+
+  padding-top: 10px;
+  border-top-width: 12px;
+
+  border-left-width: 0px;
+  border-right-width: 1px;
+  border-style: solid;
+  border-color: blue;
 }
