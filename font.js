@@ -1,6 +1,6 @@
 
 // var URL = 'https://www.googleapis.com/webfonts/v1/webfonts?fields=items(category%2Cfamily%2ClastModified%2Csubsets%2Cvariants%2Cversion)&key=';
-var URL = 'https://www.googleapis.com/webfonts/v1/webfonts?key=YOUR-API-KEY'
+var URL = 'https://www.googleapis.com/webfonts/v1/webfonts?key='
 
 var fs = require('fs');
 var https = require('https');

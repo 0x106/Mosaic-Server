@@ -2,8 +2,17 @@ const express = require('express');
 const puppeteer = require('puppeteer');
 
 var router = express.Router();
+const fonts = require('../fonts.json')
 
 const googleFontAPIKey = "AIzaSyDP0GJ5DHi5yKGiJPL8NgEFrAY_LyVeHF8";
+
+function isGoogleFont(fontname) {
+  var response = fonts[fontname]
+  if (response === undefined) {
+    return false
+  }
+  return true
+}
 
 let parse = function(snapshot) {
 
@@ -26,7 +35,29 @@ let parse = function(snapshot) {
         dom[ children[kdx] ]["parentKey"] = key;
       }
     }
+  }
 
+  for (var idx = 0; idx < styles.length; idx++) {
+
+    var font_family = styles[idx]["properties"][22]["value"]
+    var font_weight = (styles[idx]["properties"][23]["value"]).toString()
+    var components = font_family.split(',')
+    var googleFonts = {};
+
+    for (var i = 0; i < components.length; i++) {
+      var component = components[i].trim().replace(/\"/g, '').replace(/\'/g, '');
+      if(isGoogleFont(component)) {
+
+        var weight_file = fonts[component]["files"][font_weight]
+        if (weight_file === undefined) {
+          googleFonts[component] = fonts[component]["files"]['regular']
+        } else {
+          googleFonts[component] = fonts[component]["files"][font_weight]
+        }
+      }
+    }
+
+    style["properties"].push({"name":"googleFonts", "value":googleFonts})
   }
 
   for(var idx = 0; idx < layout.length; idx++) {
@@ -92,7 +123,7 @@ var createStyleWhiteList = function() {
                         'border-bottom-color', 'border-bottom-style', 'border-bottom-width',
                         'padding-left', 'padding-right', 'padding-top', 'padding-bottom',
                         'background-image',
-                        'font-weight'
+                        'font-family', 'font-weight'
                       ];
   return computedStyles;
 }

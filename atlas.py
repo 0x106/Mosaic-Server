@@ -14,6 +14,10 @@ def checkDefaults(args):
         args.url = "http://localhost:3000/"
         args.outfile = "snapshot.json"
 
+    if args.atlas:
+        args.url = "http://atlasreality.xyz/"
+        args.outfile = "snapshot.json"
+
     args.jsdebug = 0;
     if args.debug:
         args.jsdebug = 1;
@@ -26,6 +30,7 @@ def initCMDParser():
     parser.add_argument('--clientdir', action = 'store', type = str, help = 'Atlas Client dir', default="/Users/jordancampbell/helix/Atlas/Mosaic-Client/Bolt/Bolt/")
     parser.add_argument('--google', action = 'store_true', help = 'Google default option', default = False)
     parser.add_argument('--local', action = 'store_true', help = 'localhost default option', default = False)
+    parser.add_argument('--atlas', action = 'store_true', help = 'atlasreality default option', default = False)
     parser.add_argument('--jordan', action = 'store_true', help = 'jordan default option', default = False)
     parser.add_argument('--debug', action = 'store_true', help = 'debug switch', default = False)
 
