@@ -40,4 +40,21 @@ a {
   border-right-width: 1px;
   border-style: solid;
   border-color: blue;
+  background-color: red;
+  color: pink;
+}
+
+.box3 {
+  border-bottom-width: 0px;
+  padding-bottom: 20px;
+
+  padding-top: 10px;
+  border-top-width: 12px;
+
+  border-left-width: 0px;
+  border-right-width: 1px;
+  border-style: solid;
+  border-color: blue;
+  background-color: red;
+  color: pink;
 }

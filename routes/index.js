@@ -50,14 +50,14 @@ let parse = function(snapshot) {
 
         var weight_file = fonts[component]["files"][font_weight]
         if (weight_file === undefined) {
-          googleFonts[component] = fonts[component]["files"]['regular']
+          googleFonts[component] = {'url':fonts[component]["files"]['regular'], 'weight': 'regular'}
         } else {
-          googleFonts[component] = fonts[component]["files"][font_weight]
+          googleFonts[component] = {'url':fonts[component]["files"][font_weight], 'weight': font_weight}
         }
       }
     }
 
-    style["properties"].push({"name":"googleFonts", "value":googleFonts})
+    styles[idx]["properties"].push({"name":"googleFonts", "value":googleFonts})
   }
 
   for(var idx = 0; idx < layout.length; idx++) {

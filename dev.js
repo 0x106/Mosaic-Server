@@ -23,7 +23,7 @@ let parse = function(snapshot) {
   const layout = snapshot['layoutTreeNodes'];
   const styles = snapshot['computedStyles'];
 
-  var nodeData = [];
+  var nodeData = {};
 
   if (argv.debug) {
     console.log(snapshot)
@@ -63,7 +63,7 @@ let parse = function(snapshot) {
       }
     }
 
-    style["properties"].push({"name":"googleFonts", "value":googleFonts})
+    styles[idx]["properties"].push({"name":"googleFonts", "value":googleFonts})
   }
 
   for(var idx = 0; idx < layout.length; idx++) {
@@ -93,16 +93,20 @@ let parse = function(snapshot) {
     }
 
     var node = {
-      'nodeName' : nodeName,
-      'nodeValue' : nodeValue,
-      'nodeLayout' : nodeLayout,
-      'nodeStyle' : nodeStyle,
-      'key' : key,
-      'pkey' : pkey,
-      'attr': attr
+        'nodeName' : nodeName,
+        'nodeValue' : nodeValue,
+        'nodeLayout' : nodeLayout,
+        'nodeStyle' : nodeStyle,
+        'key' : key,
+        'pkey' : pkey,
+        'attr': attr
     };
-    nodeData.push(node);
+    nodeData[key] = node;
 
+  }
+
+  for (var variable in nodeData) {
+    console.log(variable);
   }
 
   fs.writeFile(argv['outfile'], JSON.stringify(nodeData, null, 4), (err) => {
