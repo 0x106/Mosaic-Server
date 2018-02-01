@@ -20,7 +20,8 @@ let parse = function(snapshot) {
   const layout = snapshot['layoutTreeNodes'];
   const styles = snapshot['computedStyles'];
 
-  var nodeData = [];
+  // var nodeData = [];
+  var nodeData = {};
 
   // generate a unique key for each node
   // - so that we can refer to a node's parent
@@ -95,7 +96,8 @@ let parse = function(snapshot) {
       'pkey' : pkey,
       'attr': attr
     };
-    nodeData.push(node);
+    // nodeData.push(node);
+    nodeData[key] = node;
 
   }
 
