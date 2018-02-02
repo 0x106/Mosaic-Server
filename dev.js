@@ -29,8 +29,29 @@ let parse = function(snapshot) {
     console.log(snapshot)
   }
 
+  // generate the key
+  var nonTextCounter = 1
   for(var idx = 0; idx < dom.length; idx++) {
-    const key = generateKey()
+    var key = ""
+    var test = 0
+    if (dom[idx]['nodeName'] != '#text') {
+        key = generateKey(nonTextCounter)
+        nonTextCounter += 1;
+        test = 1
+    } else {
+      key = generateKey(0)
+      test = 2
+    }
+
+    if (test == 0) {
+      console.log(test)
+  }
+
+  if (key == "") {
+    console.log("error");
+  }
+
+    // console.log(key);
     dom[ idx ]['key'] = key;
 
     var children = dom[ idx ]["childNodeIndexes"]
@@ -105,9 +126,11 @@ let parse = function(snapshot) {
 
   }
 
-  for (var variable in nodeData) {
-    console.log(variable);
-  }
+  // for (var variable in nodeData) {
+    // console.log(variable);
+  // }
+
+  // console.log(nodeData);
 
   fs.writeFile(argv['outfile'], JSON.stringify(nodeData, null, 4), (err) => {
     if (err) {
@@ -138,8 +161,8 @@ var createStyleWhiteList = function() {
 
 function interrogate(node) {
 
-  console.log(node);
-  console.log("=======================================");
+  // console.log(node);
+  // console.log("=======================================");
 
   if (node.children) {
     for (var idx = 0; idx < node.childNodeCount; idx++) {
@@ -148,8 +171,8 @@ function interrogate(node) {
   }
 }
 
-function generateKey() {
-  var text = "";
+function generateKey(idx) {
+  var text = idx.toString() + "-";
   var chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()";
   var keyLength = 8;
 
@@ -214,6 +237,7 @@ async function run() {
   // console.log(snapshot);
   parse(snapshot)
 
+
   await browser.close()
 }
 
@@ -229,7 +253,7 @@ run();
 
 
 
-
+//            https://developer.apple.com/videos/play/wwdc2017/414/
 
 
 

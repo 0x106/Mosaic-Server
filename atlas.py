@@ -46,6 +46,9 @@ if __name__ == '__main__':
     if args.debug:
         print(args)
 
+    # use the latest version of node
+    # os.system("nvm use lts/carbon") # currently getting error: 'sh: nvm: command not found'
+
     # ensure that the output file exists
     os.system("touch " + args.outfile)
 

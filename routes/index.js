@@ -25,8 +25,16 @@ let parse = function(snapshot) {
 
   // generate a unique key for each node
   // - so that we can refer to a node's parent
+  var nonTextCounter = 1
   for(var idx = 0; idx < dom.length; idx++) {
-    const key = generateKey()
+
+    var key = generateKey(0)
+
+    if (dom[idx]['nodeName'] != '#text') {
+        key = generateKey(nonTextCounter)
+        nonTextCounter += 1;
+    }
+
     dom[ idx ]['key'] = key;
 
     var children = dom[ idx ]["childNodeIndexes"]
@@ -104,8 +112,8 @@ let parse = function(snapshot) {
   return nodeData
 }
 
-function generateKey() {
-  var text = "";
+function generateKey(idx) {
+  var text = idx.toString() + "-";
   var chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()";
   var keyLength = 8;
 
