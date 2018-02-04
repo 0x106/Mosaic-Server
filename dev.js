@@ -213,6 +213,40 @@ async function run() {
   const node = await page._client.send('DOM.querySelector', {nodeId: doc.root.nodeId, selector: 'h1'})
   const fonts = await page._client.send('CSS.getPlatformFontsForNode', {nodeId: node.nodeId})
 
+  var images = await page.evaluate(() => {
+        var images = document.querySelectorAll('img');
+
+        function preLoad() {
+
+            var promises = [];
+
+            function loadImage(img) {
+                return new Promise(function(resolve,reject) {
+                    if (img.complete) {
+                        resolve(img)
+                    }
+                    img.onload = function() {
+                        resolve(img);
+                    };
+                    img.onerror = function(e) {
+                        resolve(img);
+                    };
+                })
+            }
+
+            for (var i = 0; i < images.length; i++)
+            {
+                promises.push(loadImage(images[i]));
+            }
+
+            return Promise.all(promises);
+        }
+
+        return preLoad();
+    });
+
+    console.log(images.length);
+
   // const allNodes = await page._client.send('DOM.querySelectorAll', {
   //       nodeId: doc.root.nodeId,
   //       selector: '*'

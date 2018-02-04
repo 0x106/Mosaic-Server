@@ -143,8 +143,8 @@ async function run(url) {
   const page = await browser.newPage()
 
   await page.setViewport({
-    width: 1000,
-    height: 500
+    width: 1600,
+    height: 800
   });
 
   // await page.setViewport({
@@ -152,7 +152,7 @@ async function run(url) {
     // height: 1080
   // });
 
-  await page.goto(url)
+  await page.goto(url, {"waitUntil" : "networkidle0"})
 
   await page._client.send('DOM.enable')
   await page._client.send('CSS.enable')
