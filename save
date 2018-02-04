@@ -1,0 +1,9 @@
+#! /bin/bash
+
+rm *~
+rm .DS_Store
+rm .*~
+
+git add .
+git commit -m "$(date)"
+git push -u server-origin master

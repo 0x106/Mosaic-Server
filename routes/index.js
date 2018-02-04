@@ -152,7 +152,7 @@ async function run(url) {
     // height: 1080
   // });
 
-  await page.goto(url, {"waitUntil" : "networkidle0"})
+  await page.goto(url)//, {"waitUntil" : "networkidle0"})
 
   await page._client.send('DOM.enable')
   await page._client.send('CSS.enable')
