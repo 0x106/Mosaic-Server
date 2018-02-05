@@ -1,0 +1,4 @@
+#! /bin/bash
+
+echo 'Need to run: nvm use lts/carbon'
+DEBUG=*: npm start

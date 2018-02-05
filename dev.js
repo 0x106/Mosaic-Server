@@ -149,7 +149,8 @@ var createStyleWhiteList = function() {
                         'border-bottom-color', 'border-bottom-style', 'border-bottom-width',
                         'padding-left', 'padding-right', 'padding-top', 'padding-bottom',
                         'background-image',
-                        'font-family', 'font-weight'
+                        'font-family', 'font-weight',
+                        'display'
                       ];
 
   if (argv.debug) {
@@ -183,15 +184,22 @@ function generateKey(idx) {
 }
 
 async function run() {
+  console.log(argv.url);
   // const browser = await puppeteer.launch({headless:false})
   const browser = await puppeteer.launch()
   const page = await browser.newPage()
   // await page.goto('localhost:3000/')
   await page.goto(argv.url)
+
   await page.setViewport({
   	width: 1920,
   	height: 1080
   });
+
+  var filename = 'img'
+  var width = '1920'
+  var height = '1080'
+  await page.screenshot({ path: `${filename}-${width}-${height}.png`});
 
   // var viewport = await page.viewport()
   // console.log(viewport);
@@ -208,44 +216,44 @@ async function run() {
   await page._client.send('Animation.setPlaybackRate', { playbackRate: 12 });
 
   const doc = await page._client.send('DOM.getDocument')
-
-  // interrogate(doc.root)
+  //
+  // // interrogate(doc.root)
   const node = await page._client.send('DOM.querySelector', {nodeId: doc.root.nodeId, selector: 'h1'})
   const fonts = await page._client.send('CSS.getPlatformFontsForNode', {nodeId: node.nodeId})
 
-  var images = await page.evaluate(() => {
-        var images = document.querySelectorAll('img');
+  // var images = await page.evaluate(() => {
+  //       var images = document.querySelectorAll('img');
+  //
+  //       function preLoad() {
+  //
+  //           var promises = [];
+  //
+  //           function loadImage(img) {
+  //               return new Promise(function(resolve,reject) {
+  //                   if (img.complete) {
+  //                       resolve(img)
+  //                   }
+  //                   img.onload = function() {
+  //                       resolve(img);
+  //                   };
+  //                   img.onerror = function(e) {
+  //                       resolve(img);
+  //                   };
+  //               })
+  //           }
+  //
+  //           for (var i = 0; i < images.length; i++)
+  //           {
+  //               promises.push(loadImage(images[i]));
+  //           }
+  //
+  //           return Promise.all(promises);
+  //       }
+  //
+  //       return preLoad();
+  //   });
 
-        function preLoad() {
-
-            var promises = [];
-
-            function loadImage(img) {
-                return new Promise(function(resolve,reject) {
-                    if (img.complete) {
-                        resolve(img)
-                    }
-                    img.onload = function() {
-                        resolve(img);
-                    };
-                    img.onerror = function(e) {
-                        resolve(img);
-                    };
-                })
-            }
-
-            for (var i = 0; i < images.length; i++)
-            {
-                promises.push(loadImage(images[i]));
-            }
-
-            return Promise.all(promises);
-        }
-
-        return preLoad();
-    });
-
-    console.log(images.length);
+    // console.log(images.length);
 
   // const allNodes = await page._client.send('DOM.querySelectorAll', {
   //       nodeId: doc.root.nodeId,

@@ -133,7 +133,8 @@ var createStyleWhiteList = function() {
                         'border-bottom-color', 'border-bottom-style', 'border-bottom-width',
                         'padding-left', 'padding-right', 'padding-top', 'padding-bottom',
                         'background-image',
-                        'font-family', 'font-weight'
+                        'font-family', 'font-weight',
+                        'display'
                       ];
   return computedStyles;
 }
