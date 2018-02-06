@@ -36,14 +36,17 @@ let parse = function(snapshot) {
     }
 
     dom[ idx ]['key'] = key;
-
+  }
+  for(var idx = 0; idx < dom.length; idx++) {
     var children = dom[ idx ]["childNodeIndexes"]
-
+    var childIndices = []
     if (children) {
       for(var kdx = 0; kdx < children.length; kdx++) {
+        childIndices.push(dom[ children[kdx] ]["key"])
         dom[ children[kdx] ]["parentKey"] = key;
       }
     }
+    dom [ idx ]['childrenKeyIndices'] = childIndices
   }
 
   for (var idx = 0; idx < styles.length; idx++) {
@@ -78,6 +81,11 @@ let parse = function(snapshot) {
     var nodeLayout = layout[ idx ]['boundingBox'];
     var nodeStyle = styles[ layout[ idx ]['styleIndex'] ]
 
+    var nodeChildren = dom[ currentNode ]['childrenKeyIndices']
+    if (!nodeChildren) {
+      nodeChildren = ''
+    }
+
     var key = dom[ currentNode ]['key'];
     var pkey = dom[ currentNode ]['parentKey'];
 
@@ -99,6 +107,7 @@ let parse = function(snapshot) {
       'nodeName' : nodeName,
       'nodeValue' : nodeValue,
       'nodeLayout' : nodeLayout,
+      'nodeCildren' : nodeChildren,
       'nodeStyle' : nodeStyle,
       'key' : key,
       'pkey' : pkey,
@@ -159,7 +168,7 @@ async function run(url) {
   await page._client.send('CSS.enable')
   await page._client.send('Animation.setPlaybackRate', { playbackRate: 12 });
 
-  const doc = await page._client.send('DOM.getDocument')
+  // const doc = await page._client.send('DOM.getDocument')
 
   let computedStyles = createStyleWhiteList();
   const snapshot = await page._client.send('DOMSnapshot.getSnapshot', {computedStyleWhitelist:computedStyles});

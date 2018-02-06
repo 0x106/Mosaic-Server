@@ -8,10 +8,10 @@ a {
 }
 
 .box {
-  display: inline;
+  /* display: inline; */
   /* height: 100px; */
-  /* border-style: solid; */
-  /* border-width: 2px; */
+  border-style: solid;
+  border-width: 2px;
   /* border-color: green; */
   /* background-color: blue; */
   /* padding-top: 20px; */
@@ -26,6 +26,7 @@ a {
   border-style: solid;
   border-width: 2px;
   border-color: green;
+  margin-bottom: 40px;
 }
 
 
