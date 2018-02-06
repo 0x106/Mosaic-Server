@@ -37,11 +37,11 @@ let parse = function(snapshot) {
     var key = ""
     var test = 0
     if (dom[idx]['nodeName'] != '#text') {
-        key = generateKey(nonTextCounter)
+        key = dom[idx]['nodeName'] + "-" + generateKey(nonTextCounter)
         nonTextCounter += 1;
         test = 1
     } else {
-      key = generateKey(0)
+      key = dom[idx]['nodeName'] + "-" + generateKey(0)
       test = 2
     }
 
@@ -129,7 +129,7 @@ let parse = function(snapshot) {
         'nodeName' : nodeName,
         'nodeValue' : nodeValue,
         'nodeLayout' : nodeLayout,
-        'nodeCildren' : nodeChildren,
+        'nodeChildren' : nodeChildren,
         'nodeStyle' : nodeStyle,
         'key' : key,
         'pkey' : pkey,

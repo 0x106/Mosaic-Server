@@ -1,6 +1,7 @@
 import argparse
 import sys, os, math, time
 import json
+import mosaic
 
 def checkDefaults(args):
     if args.google:
@@ -152,7 +153,7 @@ def traverseDOM():
 
     sys.exit()
 
-def analyse():
+def analyse1():
 
     scale = 1.0
     import cv2
@@ -225,6 +226,73 @@ def analyse():
     cv2.waitKey(0)
     sys.exit()
 
+
+def analyse1():
+
+    scale = 1.0
+    import cv2
+    import numpy as np
+
+    image = np.ones((1080, 1920, 3))
+
+    with open("snapshot.json", 'r') as datafile:
+        data = datafile.read()
+    snapshot = json.loads(data)
+
+    x1 = [snapshot[key]["nodeLayout"]["x"] for key in snapshot]
+    x2 = [snapshot[key]["nodeLayout"]["x"] + snapshot[key]["nodeLayout"]["width"] for key in snapshot]
+    y1 = [snapshot[key]["nodeLayout"]["y"] for key in snapshot]
+    y2 = [snapshot[key]["nodeLayout"]["y"] + snapshot[key]["nodeLayout"]["height"] for key in snapshot]
+
+    for key in snapshot:
+        nodeName = snapshot[key]["nodeName"]
+        pkey = snapshot[key]["pkey"]
+        parent = getParent(snapshot, pkey)
+
+        box = snapshot[key]["nodeLayout"]
+
+        display, bgcolour, colour = "", "", ""
+        try:
+            style = snapshot[key]["nodeStyle"]
+            display = getAttribute(style, "display")
+            bgcolour = getAttribute(style, "background-color")
+            colour = getAttribute(style, "color")
+        except Exception as e:
+            pass
+
+        if nodeName == "P":# or nodeName == "A" or nodeName == "INPUT":
+            x = int(scale * int(box["x"]))
+            y = int(scale * int(box["y"]))
+            w = int(scale * int(box["width"]))
+            h = int(scale * int(box["height"]))
+
+            if x < 100:
+                cv2.rectangle(image, (x, y), (x + w, y + h), (255, 0, 0), 1)
+                cv2.circle(image, (x, y), 2, (0,0,255))
+
+
+
+        if nodeName == "#text":
+            x = int(scale * int(box["x"]))
+            y = int(scale * int(box["y"]))
+            w = int(scale * int(box["width"]))
+            h = int(scale * int(box["height"]))
+
+            if x < 100:
+                print( snapshot[key]["nodeValue"] )
+                print( bgcolour, colour , display)
+                print("-----------------------")
+            #     cv2.rectangle(image, (x, y), (x + w, y + h), (0, 255, 0), - 1)
+            #     cv2.circle(image, (x, y), 2, (0,0,255))
+
+    image = cv2.resize(image, dsize=(0,0), fx=0.6, fy=0.6)
+    cv2.namedWindow("Atlas")
+    cv2.moveWindow("Atlas", 100,100)
+    cv2.imshow("Atlas", image)
+    cv2.waitKey(0)
+    sys.exit()
+
+
 if __name__ == '__main__':
     args = initCMDParser()
 
@@ -232,10 +300,13 @@ if __name__ == '__main__':
         print(args)
 
     if args.analyse:
-        analyse()
+        renderTree, __nodes, __keys = mosaic.constructRenderTree()
+        mosaic.render(renderTree, __nodes, __keys)
 
-    if args.traverse:
-        traverseDOM()
+        sys.exit()
+
+    # if args.traverse:
+    #     traverse()
 
     # use the latest version of node
     # os.system("nvm use lts/carbon") # currently getting error: 'sh: nvm: command not found'
