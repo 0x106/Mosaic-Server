@@ -28,14 +28,15 @@ let parse = function(snapshot) {
   var nonTextCounter = 1
   for(var idx = 0; idx < dom.length; idx++) {
 
-    var key = generateKey(0)
+    var key = dom[idx]['nodeName'] + "-" + generateKey(0)
 
     if (dom[idx]['nodeName'] != '#text') {
-        key = generateKey(nonTextCounter)
+        key = dom[idx]['nodeName'] + "-" + generateKey(nonTextCounter)
         nonTextCounter += 1;
     }
 
     dom[ idx ]['key'] = key;
+    dom[ idx ]['parentKey'] = []
   }
   for(var idx = 0; idx < dom.length; idx++) {
     var children = dom[ idx ]["childNodeIndexes"]
@@ -43,7 +44,7 @@ let parse = function(snapshot) {
     if (children) {
       for(var kdx = 0; kdx < children.length; kdx++) {
         childIndices.push(dom[ children[kdx] ]["key"])
-        dom[ children[kdx] ]["parentKey"] = key;
+        dom[ children[kdx] ]["parentKey"].push(key);
       }
     }
     dom [ idx ]['childrenKeyIndices'] = childIndices
@@ -107,7 +108,7 @@ let parse = function(snapshot) {
       'nodeName' : nodeName,
       'nodeValue' : nodeValue,
       'nodeLayout' : nodeLayout,
-      'nodeCildren' : nodeChildren,
+      'nodeChildren' : nodeChildren,
       'nodeStyle' : nodeStyle,
       'key' : key,
       'pkey' : pkey,
@@ -143,7 +144,7 @@ var createStyleWhiteList = function() {
                         'padding-left', 'padding-right', 'padding-top', 'padding-bottom',
                         'background-image',
                         'font-family', 'font-weight',
-                        'display'
+                        'display', 'text-align'
                       ];
   return computedStyles;
 }
