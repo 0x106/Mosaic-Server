@@ -1,6 +1,6 @@
 const express = require('express');
 const puppeteer = require('puppeteer');
-
+const fs = require("fs");
 var router = express.Router();
 const fonts = require('../fonts.json')
 
@@ -28,23 +28,26 @@ let parse = function(snapshot) {
   var nonTextCounter = 1
   for(var idx = 0; idx < dom.length; idx++) {
 
-    var key = dom[idx]['nodeName'] + "-" + generateKey(0)
-
+    // var key = dom[idx]['nodeName'] + "-" + generateKey(0)
+    var key = ""
     if (dom[idx]['nodeName'] != '#text') {
         key = dom[idx]['nodeName'] + "-" + generateKey(nonTextCounter)
         nonTextCounter += 1;
+    } else {
+        key = dom[idx]['nodeName'] + "-" + generateKey(0)
     }
 
     dom[ idx ]['key'] = key;
     dom[ idx ]['parentKey'] = []
   }
+
   for(var idx = 0; idx < dom.length; idx++) {
     var children = dom[ idx ]["childNodeIndexes"]
     var childIndices = []
     if (children) {
       for(var kdx = 0; kdx < children.length; kdx++) {
-        childIndices.push(dom[ children[kdx] ]["key"])
-        dom[ children[kdx] ]["parentKey"].push(key);
+        childIndices.push( dom[ children[kdx] ]["key"] )
+        dom[ children[kdx] ]['parentKey'].push( dom[ idx ]['key'] );
       }
     }
     dom [ idx ]['childrenKeyIndices'] = childIndices
@@ -118,6 +121,13 @@ let parse = function(snapshot) {
     nodeData[key] = node;
 
   }
+
+  fs.writeFile('snapshot.json', JSON.stringify(nodeData, null, 4), (err) => {
+    if (err) {
+        console.error(err);
+        return;
+    };
+  });
 
   return nodeData
 }

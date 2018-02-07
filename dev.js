@@ -55,6 +55,7 @@ let parse = function(snapshot) {
 
     // console.log(key);
     dom[ idx ]['key'] = key;
+    dom[ idx ]['parentKey'] = []
   }
 
   for(var idx = 0; idx < dom.length; idx++) {
@@ -64,7 +65,8 @@ let parse = function(snapshot) {
     if (children) {
       for(var kdx = 0; kdx < children.length; kdx++) {
         childIndexes.push(dom[ children[kdx] ]["key"])
-        dom[ children[kdx] ]["parentKey"] = key;
+        // dom[ children[kdx] ]["parentKey"] = dom[ idx ]['key'];
+        dom[ children[kdx] ]['parentKey'].push( dom[ idx ]['key'] );
       }
     }
     dom [ idx ]['childrenKeyIndices'] = childIndexes

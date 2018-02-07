@@ -70,11 +70,15 @@ def constructRenderTree():
     keys = [key for key in snapshot]
     nodes = {}
     for key in snapshot:
+        print(key)
         nodes[key] = Node(snapshot[key], key)
-
+    sys.exit()
     renderTree = [ nodes[keys[0]] ]
 
     for node in renderTree:
+
+        # print(node.key)
+
         for childKey in node.children():
 
             childNode = getNode( nodes, childKey )
