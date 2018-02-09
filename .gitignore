@@ -4,3 +4,5 @@ node_modules
 .*~
 output
 app/Bolt
+scratch
+__pycache__
