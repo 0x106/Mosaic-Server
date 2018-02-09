@@ -153,6 +153,8 @@ io.on('connection', function(socket) {
       console.log(`url recvd: ${url}`);
       getData(url).then( function(snapshot) {
 
+        io.emit('renderTreeStart')
+
         console.time("parse");
         var parsed = parse(snapshot)
         var data = parsed[0]
@@ -271,8 +273,13 @@ async function getData(url) {
   console.time("gotoPage");
   await page.goto(url)
   console.timeEnd("gotoPage");
+  // await page.setViewport({
+  // 	width: 1920,
+  // 	height: 1080
+  // });
+
   await page.setViewport({
-  	width: 1920,
+  	width: 1536,
   	height: 1080
   });
 
