@@ -1,0 +1,386 @@
+COMMAND     PID           USER   FD      TYPE             DEVICE   SIZE/OFF     NODE NAME
+loginwind   115 jordancampbell  cwd       DIR                1,4       1224        2 /
+loginwind   115 jordancampbell  txt       REG                1,4    1202160 18266215 /System/Library/CoreServices/loginwindow.app/Contents/MacOS/loginwindow
+loginwind   115 jordancampbell  txt       REG                1,4   25923264 11805497 /usr/share/icu/icudt57l.dat
+loginwind   115 jordancampbell  txt       REG                1,4     169984 11791167 /System/Library/LoginPlugins/DisplayServices.loginPlugin/Contents/MacOS/DisplayServices
+loginwind   115 jordancampbell  txt       REG                1,4     114160 11791174 /System/Library/LoginPlugins/FSDisconnect.loginPlugin/Contents/MacOS/FSDisconnect
+loginwind   115 jordancampbell  txt       REG                1,4     354176 11791159 /System/Library/LoginPlugins/BezelServices.loginPlugin/Contents/MacOS/BezelServices
+loginwind   115 jordancampbell  txt       REG                1,4      24928  8402233 /System/Library/PrivateFrameworks/OSD.framework/Versions/A/OSD
+loginwind   115 jordancampbell  txt       REG                1,4     246800 18268887 /System/Library/Extensions/IOHIDFamily.kext/Contents/PlugIns/IOHIDLib.plugin/Contents/MacOS/IOHIDLib
+loginwind   115 jordancampbell  txt       REG                1,4    1744096 11810186 /System/Library/PrivateFrameworks/EmbeddedOSInstall.framework/Versions/A/EmbeddedOSInstall
+loginwind   115 jordancampbell  txt       REG                1,4     886592 11790669 /System/Library/Keyboard Layouts/AppleKeyboardLayouts.bundle/Contents/Resources/AppleKeyboardLayouts-L.dat
+loginwind   115 jordancampbell  txt       REG                1,4     193807  8236247 /System/Library/CoreServices/SystemAppearance.bundle/Contents/Resources/FunctionRowAppearance.car
+loginwind   115 jordancampbell  txt       REG                1,4       4116 24032042 /Library/Caches/com.apple.iconservices.store/B560944B-657E-D0C3-7770-214C13FDB6B8.isdata
+loginwind   115 jordancampbell  txt       REG                1,4      16371  8370656 /System/Library/PrivateFrameworks/BatteryUIKit.framework/Versions/A/Resources/BatteryCharging.pdf
+loginwind   115 jordancampbell  txt       REG                1,4       4116 24032047 /Library/Caches/com.apple.iconservices.store/72576E16-6BF9-90CD-7534-45CF4DEC09AE.isdata
+loginwind   115 jordancampbell  txt       REG                1,4      21756  8370655 /System/Library/PrivateFrameworks/BatteryUIKit.framework/Versions/A/Resources/BatteryChargedAndPlugged.pdf
+loginwind   115 jordancampbell  txt       REG                1,4      19328  7001811 /private/var/folders/mr/wbk9tgzx4_l7p47_zz62qdp40000gp/C/com.apple.scriptmanager2.le.cache
+loginwind   115 jordancampbell  txt       REG                1,4       4116 24032048 /Library/Caches/com.apple.iconservices.store/18340B6B-E137-B32F-7073-215B2843EBE0.isdata
+loginwind   115 jordancampbell  txt       REG                1,4       4116 23917613 /Library/Caches/com.apple.iconservices.store/7FFDF201-5903-9650-0FB4-19DCCFEB76A2.isdata
+loginwind   115 jordancampbell  txt       REG                1,4       4116 23999019 /Library/Caches/com.apple.iconservices.store/94379E87-CC3F-CB23-7E28-7F72014C9369.isdata
+loginwind   115 jordancampbell  txt       REG                1,4       4116 24221062 /Library/Caches/com.apple.iconservices.store/CF549438-8FD4-D0BE-D847-327DC17E90F3.isdata
+loginwind   115 jordancampbell  txt       REG                1,4       4116 24179113 /Library/Caches/com.apple.iconservices.store/46A27B61-49CB-7E09-3ACD-286FF0796E23.isdata
+loginwind   115 jordancampbell  txt       REG                1,4       4116 24179114 /Library/Caches/com.apple.iconservices.store/5F9CAB3D-E877-BC7F-E9DE-8A668BF2004B.isdata
+loginwind   115 jordancampbell  txt       REG                1,4      16404 23941508 /Library/Caches/com.apple.iconservices.store/C647C2CE-DF89-C293-FFDF-D2C5DF42B38A.isdata
+loginwind   115 jordancampbell  txt       REG                1,4     330137  8236254 /System/Library/CoreServices/SystemAppearance.bundle/Contents/Resources/VibrantLightAppearance.car
+loginwind   115 jordancampbell  txt       REG                1,4     262164 24179115 /Library/Caches/com.apple.iconservices.store/68A5EF78-A578-A79A-036D-026376208932.isdata
+loginwind   115 jordancampbell  txt       REG                1,4    4078205  8236252 /System/Library/CoreServices/SystemAppearance.bundle/Contents/Resources/SystemAppearance.car
+loginwind   115 jordancampbell  txt       REG                1,4    1761608  8250842 /System/Library/Fonts/SFNSText.ttf
+loginwind   115 jordancampbell  txt       REG                1,4      93820  8479622 /System/Library/Caches/com.apple.IntlDataCache.le.kbdx
+loginwind   115 jordancampbell  txt       REG                1,4      80766 18274625 /System/Library/PrivateFrameworks/CoreWLANKit.framework/Versions/A/Resources/Assets.car
+loginwind   115 jordancampbell  txt       REG                1,4      77119  8265042 /System/Library/Frameworks/ContactsUI.framework/Versions/A/Resources/Assets.car
+loginwind   115 jordancampbell  txt       REG                1,4      25617 18274960 /System/Library/PrivateFrameworks/LoginUIKit.framework/Versions/A/Resources/LUIButtonTitles.car
+loginwind   115 jordancampbell  txt       REG                1,4    2563430  8250784 /System/Library/Fonts/Helvetica.dfont
+loginwind   115 jordancampbell  txt       REG                1,4    5425538  8262380 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Resources/Extras2.rsrc
+loginwind   115 jordancampbell  txt       REG                1,4    2372400 18273139 /System/Library/Frameworks/OpenCL.framework/Versions/A/Libraries/ImageFormats/unorm8_bgra.dylib
+loginwind   115 jordancampbell  txt       REG                1,4      10163  8370666 /System/Library/PrivateFrameworks/BatteryUIKit.framework/Versions/A/Resources/BatteryLevelCapR-L.pdf
+loginwind   115 jordancampbell  txt       REG                1,4      10164  8370668 /System/Library/PrivateFrameworks/BatteryUIKit.framework/Versions/A/Resources/BatteryLevelCapR-R.pdf
+loginwind   115 jordancampbell  txt       REG                1,4       9802  8370667 /System/Library/PrivateFrameworks/BatteryUIKit.framework/Versions/A/Resources/BatteryLevelCapR-M.pdf
+loginwind   115 jordancampbell  txt       REG                1,4      13264  8370662 /System/Library/PrivateFrameworks/BatteryUIKit.framework/Versions/A/Resources/BatteryEmpty.pdf
+loginwind   115 jordancampbell  txt       REG                1,4      24880  8331723 /System/Library/KerberosPlugins/KerberosFrameworkPlugins/heimdalodpac.bundle/Contents/MacOS/heimdalodpac
+loginwind   115 jordancampbell  txt       REG                1,4      56144 18273823 /System/Library/KerberosPlugins/KerberosFrameworkPlugins/Reachability.bundle/Contents/MacOS/Reachability
+loginwind   115 jordancampbell  txt       REG                1,4      56160 18273831 /System/Library/KerberosPlugins/KerberosFrameworkPlugins/SCKerberosConfig.bundle/Contents/MacOS/SCKerberosConfig
+loginwind   115 jordancampbell  txt       REG                1,4      84288 18266794 /System/Library/Extensions/AppleHDA.kext/Contents/PlugIns/AppleHDAHALPlugIn.bundle/Contents/MacOS/AppleHDAHALPlugIn
+loginwind   115 jordancampbell  txt       REG                1,4      57872  8461639 /usr/lib/libdz_notify.dylib
+loginwind   115 jordancampbell  txt       REG                1,4    4194064 18265539 /System/Library/Components/CoreAudio.component/Contents/MacOS/CoreAudio
+loginwind   115 jordancampbell  txt       REG                1,4    1568768 24946369 /private/var/folders/mr/wbk9tgzx4_l7p47_zz62qdp40000gp/C/com.apple.iconservices/store.index
+loginwind   115 jordancampbell  txt       REG                1,4     698896 18276107 /usr/lib/dyld
+loginwind   115 jordancampbell  txt       REG                1,4  662372352 24860468 /private/var/db/dyld/dyld_shared_cache_x86_64h
+loginwind   115 jordancampbell    0r      CHR                3,2        0t0      304 /dev/null
+loginwind   115 jordancampbell    1u      CHR                3,2        0t0      304 /dev/null
+loginwind   115 jordancampbell    2u      CHR                3,2     0t8986      304 /dev/null
+loginwind   115 jordancampbell    3r      REG                1,4         77  8459993 /private/etc/security/audit_user
+loginwind   115 jordancampbell    4r      REG                1,4        611  8459990 /private/etc/security/audit_class
+loginwind   115 jordancampbell    5r      REG                1,4        358  8459991 /private/etc/security/audit_control
+loginwind   115 jordancampbell    6r      REG                1,4     731470 20794184 /Library/Caches/com.apple.desktop.admin.png
+loginwind   115 jordancampbell    7r      REG                1,4    5425538  8262380 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Resources/Extras2.rsrc
+loginwind   115 jordancampbell    8u     IPv4 0xb16683914cd7c8ff        0t0      UDP *:*
+cfprefsd    306 jordancampbell  cwd       DIR                1,4       1224        2 /
+cfprefsd    306 jordancampbell  txt       REG                1,4      42848 18276408 /usr/sbin/cfprefsd
+cfprefsd    306 jordancampbell  txt       REG                1,4     698896 18276107 /usr/lib/dyld
+cfprefsd    306 jordancampbell  txt       REG                1,4  662372352 24860468 /private/var/db/dyld/dyld_shared_cache_x86_64h
+cfprefsd    306 jordancampbell    0r      CHR                3,2        0t0      304 /dev/null
+cfprefsd    306 jordancampbell    1u      CHR                3,2        0t0      304 /dev/null
+cfprefsd    306 jordancampbell    2u      CHR                3,2        0t0      304 /dev/null
+cfprefsd    306 jordancampbell    3r      DIR                1,4       1292  6997417 /Users/jordancampbell/Library/Preferences/ByHost
+cfprefsd    306 jordancampbell    4r      DIR                1,4       8024  6997208 /Users/jordancampbell/Library/Preferences
+cfprefsd    306 jordancampbell    5r      DIR                1,4       1258  6997448 /Users/jordancampbell/Library/Containers/com.apple.CalendarAgent/Data/Library/Preferences
+cfprefsd    306 jordancampbell    6r      DIR                1,4       1088  8815059 /Users/jordancampbell/Library/Containers/com.apple.dt.IDECacheDeleteAppExtension/Data/Library/Preferences
+cfprefsd    306 jordancampbell    7r      DIR                1,4       1122  7000442 /Users/jordancampbell/Library/Containers/com.apple.cloudphotosd/Data/Library/Preferences
+cfprefsd    306 jordancampbell    8r      DIR                1,4       1224  7000516 /Users/jordancampbell/Library/Containers/com.apple.CloudPhotosConfiguration/Data/Library/Preferences
+cfprefsd    306 jordancampbell    9r      DIR                1,4       1020  6999399 /Users/jordancampbell/Library/Containers/com.apple.ncplugin.weather/Data/Library/Preferences
+cfprefsd    306 jordancampbell   10r      DIR                1,4       1122  8481792 /Users/jordancampbell/Library/Containers/com.apple.CalendarNotification.CalNCService/Data/Library/Preferences
+cfprefsd    306 jordancampbell   11r      DIR                1,4       1224  6998608 /Users/jordancampbell/Library/Containers/com.apple.soagent/Data/Library/Preferences
+cfprefsd    306 jordancampbell   12r      DIR                1,4       1020  7000070 /Users/jordancampbell/Library/Containers/com.apple.photolibraryd/Data/Library/Preferences
+cfprefsd    306 jordancampbell   13r      DIR                1,4       1020  7456859 /Users/jordancampbell/Library/Containers/com.evernote.EvernoteHelper/Data/Library/Preferences
+cfprefsd    306 jordancampbell   14r      DIR                1,4       1020  6999329 /Users/jordancampbell/Library/Containers/com.apple.ncplugin.stocks/Data/Library/Preferences
+cfprefsd    306 jordancampbell   15r      DIR                1,4       1020  8481241 /Users/jordancampbell/Library/Containers/com.apple.photoanalysisd/Data/Library/Preferences
+cfprefsd    306 jordancampbell   16r      DIR                1,4       1122  7004967 /Users/jordancampbell/Library/Containers/com.apple.Dictionary/Data/Library/Preferences
+cfprefsd    306 jordancampbell   17r      DIR                1,4       1122  7022757 /Users/jordancampbell/Library/Containers/com.apple.Preview/Data/Library/Preferences
+cfprefsd    306 jordancampbell   18r      DIR                1,4        102 25397161 /Users/jordancampbell/Library/Group Containers/group.com.apple.notes/Library/Preferences
+cfprefsd    306 jordancampbell   19r      DIR                1,4       1054  8037050 /Users/jordancampbell/Library/Containers/com.apple.Notes/Data/Library/Preferences
+cfprefsd    306 jordancampbell   20r      DIR                1,4        102 25397222 /Users/jordancampbell/Library/Containers/com.apple.Notes/Data/Library/Preferences/ByHost
+cfprefsd    306 jordancampbell   21r      DIR                1,4       1428  8496411 /Users/jordancampbell/Library/Containers/com.apple.SiriNCService/Data/Library/Preferences
+cfprefsd    306 jordancampbell   22r      DIR                1,4       1020  8490817 /Users/jordancampbell/Library/Containers/com.apple.siri.media-indexer/Data/Library/Preferences
+cfprefsd    306 jordancampbell   23r      DIR                1,4        102  7022828 /Users/jordancampbell/Library/Group Containers/com.apple.PreviewLegacySignaturesConversion/Library/Preferences
+cfprefsd    306 jordancampbell   24r      DIR                1,4        102 10984070 /Users/jordancampbell/Library/Group Containers/74J34U3R6X.com.apple.iWork/Library/Preferences
+cfprefsd    306 jordancampbell   25r      DIR                1,4       1020  8038031 /Users/jordancampbell/Library/Containers/com.apple.iWork.Numbers/Data/Library/Preferences
+cfprefsd    306 jordancampbell   26r      DIR                1,4       1020  8038103 /Users/jordancampbell/Library/Containers/com.apple.iWork.Keynote/Data/Library/Preferences
+cfprefsd    306 jordancampbell   28r      DIR                1,4       1598  8037616 /Users/jordancampbell/Library/Containers/com.apple.FaceTime/Data/Library/Preferences
+cfprefsd    306 jordancampbell   29r      DIR                1,4       1020  7022839 /Users/jordancampbell/Library/Containers/com.apple.BKAgentService/Data/Library/Preferences
+cfprefsd    306 jordancampbell   30r      DIR                1,4       1054  7295585 /Users/jordancampbell/Library/Containers/com.apple.QuickTimePlayerX/Data/Library/Preferences
+cfprefsd    306 jordancampbell   31r      DIR                1,4       1122  7001432 /Users/jordancampbell/Library/Containers/com.apple.mail/Data/Library/Preferences
+cfprefsd    306 jordancampbell   32r      DIR                1,4       1020  7035521 /Users/jordancampbell/Library/Containers/com.apple.corerecents.recentsd/Data/Library/Preferences
+UserEvent   309 jordancampbell  cwd       DIR                1,4       1224        2 /
+UserEvent   309 jordancampbell  txt       REG                1,4      36096  8462120 /usr/libexec/UserEventAgent
+UserEvent   309 jordancampbell  txt       REG                1,4     372688 18273581 /System/Library/Frameworks/Security.framework/Versions/A/PlugIns/csparser.bundle/Contents/MacOS/csparser
+UserEvent   309 jordancampbell  txt       REG                1,4      32768 25049083 /private/var/db/mds/messages/502/se_SecurityMessages
+UserEvent   309 jordancampbell  txt       REG                1,4      28144 11803556 /System/Library/UserEventPlugins/AppleHIDMouseAgent.plugin/Contents/MacOS/AppleHIDMouseAgent
+UserEvent   309 jordancampbell  txt       REG                1,4      26880 11803564 /System/Library/UserEventPlugins/AssistantUEA.plugin/Contents/MacOS/AssistantUEA
+UserEvent   309 jordancampbell  txt       REG                1,4      46752  8458855 /System/Library/UserEventPlugins/AutoTimeZone.plugin/Contents/MacOS/AutoTimeZone
+UserEvent   309 jordancampbell  txt       REG                1,4      26560  8458863 /System/Library/UserEventPlugins/BTMMPortInUseAgent.plugin/Contents/MacOS/BTMMPortInUseAgent
+UserEvent   309 jordancampbell  txt       REG                1,4      77232 18275894 /System/Library/UserEventPlugins/BluetoothUserAgent-Plugin.plugin/Contents/MacOS/BluetoothUserAgent-Plugin
+UserEvent   309 jordancampbell  txt       REG                1,4      30944  8458957 /System/Library/UserEventPlugins/BonjourEvents.plugin/Contents/MacOS/BonjourEvents
+UserEvent   309 jordancampbell  txt       REG                1,4      32848 18275902 /System/Library/UserEventPlugins/CaptiveUserAgent.plugin/Contents/MacOS/CaptiveUserAgent
+UserEvent   309 jordancampbell  txt       REG                1,4      39584 18275909 /System/Library/UserEventPlugins/EAPOLMonitor.plugin/Contents/MacOS/EAPOLMonitor
+UserEvent   309 jordancampbell  txt       REG                1,4      19376 18275916 /System/Library/UserEventPlugins/GSSNotificationForwarder.plugin/Contents/MacOS/GSSNotificationForwarder
+UserEvent   309 jordancampbell  txt       REG                1,4      39840 11803604 /System/Library/UserEventPlugins/LocationMenu.plugin/Contents/MacOS/LocationMenu
+UserEvent   309 jordancampbell  txt       REG                1,4      30224  8459084 /System/Library/UserEventPlugins/PrinterMonitor.plugin/Contents/MacOS/PrinterMonitor
+UserEvent   309 jordancampbell  txt       REG                1,4      39888 18275924 /System/Library/UserEventPlugins/SCMonitor.plugin/Contents/MacOS/SCMonitor
+UserEvent   309 jordancampbell  txt       REG                1,4      25056  8459185 /System/Library/UserEventPlugins/com.apple.TimeMachine.plugin/Contents/MacOS/com.apple.TimeMachine
+UserEvent   309 jordancampbell  txt       REG                1,4      25312  8459201 /System/Library/UserEventPlugins/com.apple.bonjour.plugin/Contents/MacOS/com.apple.bonjour
+UserEvent   309 jordancampbell  txt       REG                1,4      20144  8459209 /System/Library/UserEventPlugins/com.apple.cfnotification.plugin/Contents/MacOS/com.apple.cfnotification
+UserEvent   309 jordancampbell  txt       REG                1,4      19936  8459225 /System/Library/UserEventPlugins/com.apple.diskarbitration.plugin/Contents/MacOS/com.apple.diskarbitration
+UserEvent   309 jordancampbell  txt       REG                1,4      19840  8459233 /System/Library/UserEventPlugins/com.apple.dispatch.vfs.plugin/Contents/MacOS/com.apple.dispatch.vfs
+UserEvent   309 jordancampbell  txt       REG                1,4   25923264 11805497 /usr/share/icu/icudt57l.dat
+UserEvent   309 jordancampbell  txt       REG                1,4     123168 11803636 /System/Library/UserEventPlugins/com.apple.cts.plugin/Contents/MacOS/com.apple.cts
+UserEvent   309 jordancampbell  txt       REG                1,4      26384  8459241 /System/Library/UserEventPlugins/com.apple.fsevents.matching.plugin/Contents/MacOS/com.apple.fsevents.matching
+UserEvent   309 jordancampbell  txt       REG                1,4      24816  8459249 /System/Library/UserEventPlugins/com.apple.iokit.matching.plugin/Contents/MacOS/com.apple.iokit.matching
+UserEvent   309 jordancampbell  txt       REG                1,4      24960  8459257 /System/Library/UserEventPlugins/com.apple.launchd.helper.plugin/Contents/MacOS/com.apple.launchd.helper
+UserEvent   309 jordancampbell  txt       REG                1,4      75760 11803644 /System/Library/UserEventPlugins/com.apple.netsvcproxy.plugin/Contents/MacOS/com.apple.netsvcproxy
+UserEvent   309 jordancampbell  txt       REG                1,4      18160 11803652 /System/Library/UserEventPlugins/com.apple.network.plugin/Contents/MacOS/com.apple.network
+UserEvent   309 jordancampbell  txt       REG                1,4      19440  8459291 /System/Library/UserEventPlugins/com.apple.notifyd.matching.plugin/Contents/MacOS/com.apple.notifyd.matching
+UserEvent   309 jordancampbell  txt       REG                1,4      23248 18275940 /System/Library/UserEventPlugins/com.apple.nsurlsessiond.plugin/Contents/MacOS/com.apple.nsurlsessiond
+UserEvent   309 jordancampbell  txt       REG                1,4      50672 11803676 /System/Library/UserEventPlugins/com.apple.rcdevent.matching.plugin/Contents/MacOS/com.apple.rcdevent.matching
+UserEvent   309 jordancampbell  txt       REG                1,4      19712  8459326 /System/Library/UserEventPlugins/com.apple.reachability.plugin/Contents/MacOS/com.apple.reachability
+UserEvent   309 jordancampbell  txt       REG                1,4      20336  8459334 /System/Library/UserEventPlugins/com.apple.systemconfiguration.plugin/Contents/MacOS/com.apple.systemconfiguration
+UserEvent   309 jordancampbell  txt       REG                1,4      31760  8459358 /System/Library/UserEventPlugins/com.apple.time.plugin/Contents/MacOS/com.apple.time
+UserEvent   309 jordancampbell  txt       REG                1,4      31824 11803699 /System/Library/UserEventPlugins/com.apple.universalaccess.events.plugin/Contents/MacOS/com.apple.universalaccess.events
+UserEvent   309 jordancampbell  txt       REG                1,4      20656 11803705 /System/Library/UserEventPlugins/com.apple.usernotificationcenter.matching.plugin/Contents/MacOS/com.apple.usernotificationcenter.matching
+UserEvent   309 jordancampbell  txt       REG                1,4      31136 11803712 /System/Library/UserEventPlugins/locationd.events.plugin/Contents/MacOS/locationd.events
+UserEvent   309 jordancampbell  txt       REG                1,4     698896 18276107 /usr/lib/dyld
+UserEvent   309 jordancampbell  txt       REG                1,4  662372352 24860468 /private/var/db/dyld/dyld_shared_cache_x86_64h
+UserEvent   309 jordancampbell    0r      CHR                3,2        0t0      304 /dev/null
+UserEvent   309 jordancampbell    1u      CHR                3,2        0t0      304 /dev/null
+UserEvent   309 jordancampbell    2u      CHR                3,2     0t2169      304 /dev/null
+UserEvent   309 jordancampbell    3r      DIR                1,4        340  6999207 /Users/jordancampbell/Library/Caches/GeoServices
+UserEvent   309 jordancampbell    4   NPOLICY                                        
+UserEvent   309 jordancampbell    5u     IPv4 0xb16683914927187f        0t0      UDP *:*
+UserEvent   309 jordancampbell    6u    systm 0xb16683914c1d375f        0t0          [1:6:1]
+UserEvent   309 jordancampbell    7u     unix 0xb1668391519fee27        0t0          ->0xb1668391519feeef
+UserEvent   309 jordancampbell    8u     unix 0xb1668391519feeef        0t0          ->0xb1668391519fee27
+UserEvent   309 jordancampbell    9u     unix 0xb1668391519fefb7        0t0          ->0xb1668391519ff07f
+UserEvent   309 jordancampbell   10r      DIR                1,4       1904  8460018 /private/tmp
+UserEvent   309 jordancampbell   11u   KQUEUE                                        count=0, state=0x8
+UserEvent   309 jordancampbell   12r      DIR                1,4        136 10823028 /Users/jordancampbell/Library/Application Support/Steam/Steam.AppBundle/Steam
+UserEvent   309 jordancampbell   13r      DIR                1,4        102 10823027 /Users/jordancampbell/Library/Application Support/Steam/Steam.AppBundle
+UserEvent   309 jordancampbell   14r      DIR                1,4        408 10823016 /Users/jordancampbell/Library/Application Support/Steam
+UserEvent   309 jordancampbell   15r      DIR                1,4       1734  6997218 /Users/jordancampbell/Library/Application Support
+UserEvent   309 jordancampbell   16r      DIR                1,4       2312  6997203 /Users/jordancampbell/Library
+UserEvent   309 jordancampbell   17r      DIR                1,4       2822  6997198 /Users/jordancampbell
+UserEvent   309 jordancampbell   18r      DIR                1,4        238   404122 /Users
+UserEvent   309 jordancampbell   19u     unix 0xb1668391519fde87        0t0          ->0xb1668391519fdf4f
+UserEvent   309 jordancampbell   20u   KQUEUE                                        count=0, state=0x8
+UserEvent   309 jordancampbell   21r      DIR                1,4       1088  7000634 /Users/jordancampbell/Library/Safari
+UserEvent   309 jordancampbell   22r      DIR                1,4       1156  8460363 /private/var/run
+UserEvent   309 jordancampbell   23r      DIR                1,4        884  8040005 /private/var
+UserEvent   309 jordancampbell   24r      DIR                1,4        204  8040004 /private
+UserEvent   309 jordancampbell   25u   KQUEUE                                        count=0, state=0x8
+UserEvent   309 jordancampbell   26r      DIR                1,4        272  8133642 /Library/Internet Plug-Ins
+UserEvent   309 jordancampbell   27r      DIR                1,4       2074  8115582 /Library
+UserEvent   309 jordancampbell   28r      DIR                1,4        102 25755228 /Library/Internet Plug-Ins/Flash Player.plugin
+UserEvent   309 jordancampbell   29u   KQUEUE                                        count=0, state=0x8
+UserEvent   309 jordancampbell   30r      DIR                1,4        102  6997247 /Users/jordancampbell/Library/Internet Plug-Ins
+UserEvent   309 jordancampbell   31r      DIR                1,4        102  6997247 /Users/jordancampbell/Library/Internet Plug-Ins
+UserEvent   309 jordancampbell   32r      DIR                1,4       2312  6997203 /Users/jordancampbell/Library
+UserEvent   309 jordancampbell   33r      DIR                1,4       2822  6997198 /Users/jordancampbell
+UserEvent   309 jordancampbell   34r      DIR                1,4        238   404122 /Users
+UserEvent   309 jordancampbell   35u   KQUEUE                                        count=0, state=0x8
+UserEvent   309 jordancampbell   36u      REG                1,4          0  8496407 /Users/jordancampbell/Library/Assistant/sync_flag
+UserEvent   309 jordancampbell   37r      DIR                1,4       1088  7000634 /Users/jordancampbell/Library/Safari
+UserEvent   309 jordancampbell   38r      DIR                1,4       2312  6997203 /Users/jordancampbell/Library
+UserEvent   309 jordancampbell   39r      DIR                1,4       2822  6997198 /Users/jordancampbell
+UserEvent   309 jordancampbell   40r      DIR                1,4        238   404122 /Users
+UserEvent   309 jordancampbell   41u   KQUEUE                                        count=0, state=0x8
+UserEvent   309 jordancampbell   42r      DIR                1,4         68   611362 /private/var/db/PanicReporter
+UserEvent   309 jordancampbell   43r      DIR                1,4       2754  8040006 /private/var/db
+UserEvent   309 jordancampbell   44r      DIR                1,4        884  8040005 /private/var
+UserEvent   309 jordancampbell   45r      DIR                1,4        204  8040004 /private
+UserEvent   309 jordancampbell   46u   KQUEUE                                        count=0, state=0x8
+UserEvent   309 jordancampbell   47r      DIR                1,4       4080  8459735 /private/etc
+UserEvent   309 jordancampbell   48r      DIR                1,4       4080  8459735 /private/etc
+UserEvent   309 jordancampbell   49r      DIR                1,4        204  8040004 /private
+UserEvent   309 jordancampbell   50r      DIR                1,4        102    88573 /Library/Application Support/Apple/Remote Desktop
+UserEvent   309 jordancampbell   51r      DIR                1,4        102    88573 /Library/Application Support/Apple/Remote Desktop
+UserEvent   309 jordancampbell   52r      DIR                1,4        408  8115585 /Library/Application Support/Apple
+UserEvent   309 jordancampbell   53r      DIR                1,4        578  8115584 /Library/Application Support
+UserEvent   309 jordancampbell   54r      DIR                1,4       2074  8115582 /Library
+UserEvent   309 jordancampbell   55u   KQUEUE                                        count=0, state=0x8
+UserEvent   309 jordancampbell   56r      DIR                1,4         68  6997212 /Users/jordancampbell/Library/Services
+UserEvent   309 jordancampbell   57r      DIR                1,4       2312  6997203 /Users/jordancampbell/Library
+UserEvent   309 jordancampbell   58r      DIR                1,4       2822  6997198 /Users/jordancampbell
+UserEvent   309 jordancampbell   59r      DIR                1,4        238   404122 /Users
+UserEvent   309 jordancampbell   60u   KQUEUE                                        count=0, state=0x8
+UserEvent   309 jordancampbell   61r      DIR                1,4       2074  8115582 /Library
+UserEvent   309 jordancampbell   62r      DIR                1,4       2074  8115582 /Library
+UserEvent   309 jordancampbell   63u   KQUEUE                                        count=0, state=0x8
+UserEvent   309 jordancampbell   64r      DIR                1,4        238  6998001 /Users/jordancampbell/Library/com.apple.nsurlsessiond
+UserEvent   309 jordancampbell   65r      DIR                1,4       2312  6997203 /Users/jordancampbell/Library
+UserEvent   309 jordancampbell   66r      DIR                1,4       2822  6997198 /Users/jordancampbell
+UserEvent   309 jordancampbell   67r      DIR                1,4        238   404122 /Users
+UserEvent   309 jordancampbell   68u   KQUEUE                                        count=0, state=0x8
+UserEvent   309 jordancampbell   69r      DIR                1,4       1904  8460018 /private/tmp
+UserEvent   309 jordancampbell   70r      DIR                1,4        340  6999207 /Users/jordancampbell/Library/Caches/GeoServices
+UserEvent   309 jordancampbell   71r      DIR                1,4       3536  6997204 /Users/jordancampbell/Library/Caches
+UserEvent   309 jordancampbell   72r      DIR                1,4       2312  6997203 /Users/jordancampbell/Library
+UserEvent   309 jordancampbell   73r      DIR                1,4       2822  6997198 /Users/jordancampbell
+UserEvent   309 jordancampbell   74r      DIR                1,4        238   404122 /Users
+UserEvent   309 jordancampbell   75u   KQUEUE                                        count=0, state=0x8
+UserEvent   309 jordancampbell   76r      DIR                1,4       2176  8040055 /Applications
+UserEvent   309 jordancampbell   77r      DIR                1,4       1224        2 /
+UserEvent   309 jordancampbell   78r      DIR                1,4        748  8084070 /Applications/Utilities
+UserEvent   309 jordancampbell   79r      DIR                1,4       2176  8040055 /Applications
+UserEvent   309 jordancampbell   80u   KQUEUE                                        count=0, state=0x8
+UserEvent   309 jordancampbell   81r      DIR                1,4        340 16436685 /Users/jordancampbell/Library/Caches/com.apple.helpd
+UserEvent   309 jordancampbell   82r      DIR                1,4       3536  6997204 /Users/jordancampbell/Library/Caches
+UserEvent   309 jordancampbell   83r      DIR                1,4       2312  6997203 /Users/jordancampbell/Library
+UserEvent   309 jordancampbell   84r      DIR                1,4       2822  6997198 /Users/jordancampbell
+UserEvent   309 jordancampbell   85r      DIR                1,4        238   404122 /Users
+UserEvent   309 jordancampbell   86u   KQUEUE                                        count=0, state=0x8
+UserEvent   309 jordancampbell   87r      DIR                1,4        204  8040004 /private
+UserEvent   309 jordancampbell   88r      DIR                1,4       1156  8460363 /private/var/run
+UserEvent   309 jordancampbell   90u   KQUEUE                                        count=0, state=0x8
+UserEvent   309 jordancampbell   91r      DIR                1,4       1088  8496481 /Users/jordancampbell/Library/Mobile Documents
+UserEvent   309 jordancampbell   92r      DIR                1,4       2312  6997203 /Users/jordancampbell/Library
+UserEvent   309 jordancampbell   93r      DIR                1,4       2822  6997198 /Users/jordancampbell
+UserEvent   309 jordancampbell   94r      DIR                1,4        238   404122 /Users
+distnoted   311 jordancampbell  cwd       DIR                1,4       1224        2 /
+distnoted   311 jordancampbell  txt       REG                1,4     141920 18276417 /usr/sbin/distnoted
+distnoted   311 jordancampbell  txt       REG                1,4     698896 18276107 /usr/lib/dyld
+distnoted   311 jordancampbell  txt       REG                1,4  662372352 24860468 /private/var/db/dyld/dyld_shared_cache_x86_64h
+distnoted   311 jordancampbell    0r      CHR                3,2        0t0      304 /dev/null
+distnoted   311 jordancampbell    1u      CHR                3,2        0t0      304 /dev/null
+distnoted   311 jordancampbell    2u      CHR                3,2      0t166      304 /dev/null
+lsd         313 jordancampbell  cwd       DIR                1,4       1224        2 /
+lsd         313 jordancampbell  txt       REG                1,4      18816 11804281 /usr/libexec/lsd
+lsd         313 jordancampbell  txt       REG                1,4   25923264 11805497 /usr/share/icu/icudt57l.dat
+lsd         313 jordancampbell  txt       REG                1,4      32768 25382873 /private/var/db/mds/messages/502/se_SecurityMessages
+lsd         313 jordancampbell  txt       REG                1,4     372688 18273581 /System/Library/Frameworks/Security.framework/Versions/A/PlugIns/csparser.bundle/Contents/MacOS/csparser
+lsd         313 jordancampbell  txt       REG                1,4   15003648 26015118 /private/var/folders/mr/wbk9tgzx4_l7p47_zz62qdp40000gp/0/com.apple.LaunchServices-175-v2.csstore
+lsd         313 jordancampbell  txt       REG                1,4     698896 18276107 /usr/lib/dyld
+lsd         313 jordancampbell  txt       REG                1,4  662372352 24860468 /private/var/db/dyld/dyld_shared_cache_x86_64h
+lsd         313 jordancampbell    0r      CHR                3,2        0t0      304 /dev/null
+lsd         313 jordancampbell    1u      CHR                3,2        0t0      304 /dev/null
+lsd         313 jordancampbell    2u      CHR                3,2        0t0      304 /dev/null
+CommCente   314 jordancampbell  cwd       DIR                1,4       1224        2 /
+CommCente   314 jordancampbell  txt       REG                1,4    8811632 11810113 /System/Library/Frameworks/CoreTelephony.framework/Support/CommCenter
+CommCente   314 jordancampbell  txt       REG                1,4    2016896 11810114 /System/Library/Frameworks/CoreTelephony.framework/Support/libCommCenterBase.dylib
+CommCente   314 jordancampbell  txt       REG                1,4    1831712 11810111 /System/Library/Frameworks/CoreTelephony.framework/Support/libCommCenterAWDMetrics.dylib
+CommCente   314 jordancampbell  txt       REG                1,4      38272 18276120 /usr/lib/libipconfig.dylib
+CommCente   314 jordancampbell  txt       REG                1,4      86448 11804047 /usr/lib/libQMIParserDynamic.dylib
+CommCente   314 jordancampbell  txt       REG                1,4     632016 11804040 /usr/lib/libATCommandStudioDynamic.dylib
+CommCente   314 jordancampbell  txt       REG                1,4     961680 11787622 /System/Library/Frameworks/CoreTelephony.framework/Support/libCommCenterCommandDrivers.dylib
+CommCente   314 jordancampbell  txt       REG                1,4     190656 11800815 /System/Library/PrivateFrameworks/SyncedDefaults.framework/Versions/A/SyncedDefaults
+CommCente   314 jordancampbell  txt       REG                1,4   25923264 11805497 /usr/share/icu/icudt57l.dat
+CommCente   314 jordancampbell  txt       REG                1,4    5187040  8395159 /System/Library/PrivateFrameworks/IPTelephony.framework/Support/libIPTelephony.dylib
+CommCente   314 jordancampbell  txt       REG                1,4      71828  8404876 /System/Library/PrivateFrameworks/PhoneNumbers.framework/Versions/A/Resources/Default.phoneformat
+CommCente   314 jordancampbell  txt       REG                1,4     698896 18276107 /usr/lib/dyld
+CommCente   314 jordancampbell  txt       REG                1,4  662372352 24860468 /private/var/db/dyld/dyld_shared_cache_x86_64h
+CommCente   314 jordancampbell    0r      CHR                3,2        0t0      304 /dev/null
+CommCente   314 jordancampbell    1u      CHR                3,2        0t0      304 /dev/null
+CommCente   314 jordancampbell    2u      CHR                3,2      0t579      304 /dev/null
+CommCente   314 jordancampbell    3u     unix 0xb1668391519fe4c7        0t0          ->0xb16683914b2f871f
+CommCente   314 jordancampbell    4   NPOLICY                                        
+CommCente   314 jordancampbell    5u    systm                           0t0          
+CommCente   314 jordancampbell    6u    systm                           0t0          
+CommCente   314 jordancampbell    7u    systm                           0t0          
+CommCente   314 jordancampbell    8u    systm                           0t0          
+CommCente   314 jordancampbell    9u    systm                           0t0          
+CommCente   314 jordancampbell   10u    systm                           0t0          
+CommCente   314 jordancampbell   11u    systm                           0t0          
+CommCente   314 jordancampbell   12u    systm                           0t0          
+CommCente   314 jordancampbell   13u    systm                           0t0          
+CommCente   314 jordancampbell   14u    systm 0xb16683914c1d3adf        0t0          [1:1:b]
+trustd      315 jordancampbell  cwd       DIR                1,4       1224        2 /
+trustd      315 jordancampbell  txt       REG                1,4     965232 18276393 /usr/libexec/trustd
+trustd      315 jordancampbell  txt       REG                1,4      32768  8480905 /Users/jordancampbell/Library/Keychains/E717A877-02DA-503F-93D7-B1767DFAA236/ocspcache.sqlite3-shm
+trustd      315 jordancampbell  txt       REG                1,4      32768 25382873 /private/var/db/mds/messages/502/se_SecurityMessages
+trustd      315 jordancampbell  txt       REG                1,4      32768  6997545 /Users/jordancampbell/Library/Keychains/E717A877-02DA-503F-93D7-B1767DFAA236/keychain-2.db-shm
+trustd      315 jordancampbell  txt       REG                1,4   25923264 11805497 /usr/share/icu/icudt57l.dat
+trustd      315 jordancampbell  txt       REG                1,4     698896 18276107 /usr/lib/dyld
+trustd      315 jordancampbell  txt       REG                1,4  662372352 24860468 /private/var/db/dyld/dyld_shared_cache_x86_64h
+trustd      315 jordancampbell    0r      CHR                3,2        0t0      304 /dev/null
+trustd      315 jordancampbell    1u      CHR                3,2        0t0      304 /dev/null
+trustd      315 jordancampbell    2u      CHR                3,2        0t0      304 /dev/null
+trustd      315 jordancampbell    3r      REG                1,4     194536  8446287 /System/Library/Security/Certificates.bundle/Contents/Resources/certsTable.data
+trustd      315 jordancampbell    4u      REG                1,4     110592  8480901 /Users/jordancampbell/Library/Keychains/E717A877-02DA-503F-93D7-B1767DFAA236/ocspcache.sqlite3
+trustd      315 jordancampbell    5u      REG                1,4     270336  6997541 /Users/jordancampbell/Library/Keychains/E717A877-02DA-503F-93D7-B1767DFAA236/keychain-2.db
+trustd      315 jordancampbell    6u      REG                1,4      32768  8480905 /Users/jordancampbell/Library/Keychains/E717A877-02DA-503F-93D7-B1767DFAA236/ocspcache.sqlite3-shm
+trustd      315 jordancampbell    7u      REG                1,4     110592  8480901 /Users/jordancampbell/Library/Keychains/E717A877-02DA-503F-93D7-B1767DFAA236/ocspcache.sqlite3
+trustd      315 jordancampbell    8u      REG                1,4     270336  6997541 /Users/jordancampbell/Library/Keychains/E717A877-02DA-503F-93D7-B1767DFAA236/keychain-2.db
+trustd      315 jordancampbell    9u      REG                1,4     270336  6997541 /Users/jordancampbell/Library/Keychains/E717A877-02DA-503F-93D7-B1767DFAA236/keychain-2.db
+trustd      315 jordancampbell   11u      REG                1,4      32768  6997545 /Users/jordancampbell/Library/Keychains/E717A877-02DA-503F-93D7-B1767DFAA236/keychain-2.db-shm
+trustd      315 jordancampbell   12u      REG                1,4     270336  6997541 /Users/jordancampbell/Library/Keychains/E717A877-02DA-503F-93D7-B1767DFAA236/keychain-2.db
+trustd      315 jordancampbell   13u      REG                1,4          0  9345797 /Users/jordancampbell/Library/Keychains/E717A877-02DA-503F-93D7-B1767DFAA236/caissuercache.sqlite3
+trustd      315 jordancampbell   14   NPOLICY                                        
+trustd      315 jordancampbell   15u    systm                           0t0          
+trustd      315 jordancampbell   16u      REG                1,4     110592  8480901 /Users/jordancampbell/Library/Keychains/E717A877-02DA-503F-93D7-B1767DFAA236/ocspcache.sqlite3
+trustd      315 jordancampbell   17u      REG                1,4     741632  8480904 /Users/jordancampbell/Library/Keychains/E717A877-02DA-503F-93D7-B1767DFAA236/ocspcache.sqlite3-wal
+trustd      315 jordancampbell   18u      REG                1,4     110592  8480901 /Users/jordancampbell/Library/Keychains/E717A877-02DA-503F-93D7-B1767DFAA236/ocspcache.sqlite3
+trustd      315 jordancampbell   19u      REG                1,4    1924072  6997544 /Users/jordancampbell/Library/Keychains/E717A877-02DA-503F-93D7-B1767DFAA236/keychain-2.db-wal
+trustd      315 jordancampbell   20u      REG                1,4    1924072  6997544 /Users/jordancampbell/Library/Keychains/E717A877-02DA-503F-93D7-B1767DFAA236/keychain-2.db-wal
+trustd      315 jordancampbell   21u     unix 0xb166839158c608af        0t0          ->0xb166839158c607e7
+trustd      315 jordancampbell   22u     unix 0xb166839158c607e7        0t0          ->0xb166839158c608af
+trustd      315 jordancampbell   23u      REG                1,4    1924072  6997544 /Users/jordancampbell/Library/Keychains/E717A877-02DA-503F-93D7-B1767DFAA236/keychain-2.db-wal
+trustd      315 jordancampbell   24u      REG                1,4     741632  8480904 /Users/jordancampbell/Library/Keychains/E717A877-02DA-503F-93D7-B1767DFAA236/ocspcache.sqlite3-wal
+trustd      315 jordancampbell   25u      REG                1,4        512 25395397 /Users/jordancampbell/Library/Keychains/E717A877-02DA-503F-93D7-B1767DFAA236/caissuercache.sqlite3-journal
+trustd      315 jordancampbell   26u      REG                1,4     741632  8480904 /Users/jordancampbell/Library/Keychains/E717A877-02DA-503F-93D7-B1767DFAA236/ocspcache.sqlite3-wal
+secd        317 jordancampbell  cwd       DIR                1,4       1224        2 /
+secd        317 jordancampbell  txt       REG                1,4    1211056 18276382 /usr/libexec/secd
+secd        317 jordancampbell  txt       REG                1,4      32768  6997545 /Users/jordancampbell/Library/Keychains/E717A877-02DA-503F-93D7-B1767DFAA236/keychain-2.db-shm
+secd        317 jordancampbell  txt       REG                1,4   25923264 11805497 /usr/share/icu/icudt57l.dat
+secd        317 jordancampbell  txt       REG                1,4     698896 18276107 /usr/lib/dyld
+secd        317 jordancampbell  txt       REG                1,4  662372352 24860468 /private/var/db/dyld/dyld_shared_cache_x86_64h
+secd        317 jordancampbell    0r      CHR                3,2        0t0      304 /dev/null
+secd        317 jordancampbell    1u      CHR                3,2        0t0      304 /dev/null
+secd        317 jordancampbell    2u      CHR                3,2        0t0      304 /dev/null
+secd        317 jordancampbell    3u      REG                1,4     270336  6997541 /Users/jordancampbell/Library/Keychains/E717A877-02DA-503F-93D7-B1767DFAA236/keychain-2.db
+secd        317 jordancampbell    4u      REG                1,4    1924072  6997544 /Users/jordancampbell/Library/Keychains/E717A877-02DA-503F-93D7-B1767DFAA236/keychain-2.db-wal
+secd        317 jordancampbell    5u      REG                1,4      32768  6997545 /Users/jordancampbell/Library/Keychains/E717A877-02DA-503F-93D7-B1767DFAA236/keychain-2.db-shm
+secd        317 jordancampbell    6u      REG                1,4     270336  6997541 /Users/jordancampbell/Library/Keychains/E717A877-02DA-503F-93D7-B1767DFAA236/keychain-2.db
+secd        317 jordancampbell    7u      REG                1,4    1924072  6997544 /Users/jordancampbell/Library/Keychains/E717A877-02DA-503F-93D7-B1767DFAA236/keychain-2.db-wal
+secd        317 jordancampbell    8u      REG                1,4     270336  6997541 /Users/jordancampbell/Library/Keychains/E717A877-02DA-503F-93D7-B1767DFAA236/keychain-2.db
+secd        317 jordancampbell    9u      REG                1,4    1924072  6997544 /Users/jordancampbell/Library/Keychains/E717A877-02DA-503F-93D7-B1767DFAA236/keychain-2.db-wal
+secd        317 jordancampbell   10u      REG                1,4     270336  6997541 /Users/jordancampbell/Library/Keychains/E717A877-02DA-503F-93D7-B1767DFAA236/keychain-2.db
+callservi   319 jordancampbell  cwd       DIR                1,4       1224        2 /
+callservi   319 jordancampbell  txt       REG                1,4    1725232  8436862 /System/Library/PrivateFrameworks/TelephonyUtilities.framework/callservicesd
+callservi   319 jordancampbell  txt       REG                1,4      57040 11775047 /System/Library/Address Book Plug-Ins/LocalSource.sourcebundle/Contents/MacOS/LocalSource
+callservi   319 jordancampbell  txt       REG                1,4      89392 11775023 /System/Library/Address Book Plug-Ins/DirectoryServices.sourcebundle/Contents/MacOS/DirectoryServices
+callservi   319 jordancampbell  txt       REG                1,4   25923264 11805497 /usr/share/icu/icudt57l.dat
+callservi   319 jordancampbell  txt       REG                1,4    1082096 11810126 /System/Library/Address Book Plug-Ins/CardDAVPlugin.sourcebundle/Contents/MacOS/CardDAVPlugin
+callservi   319 jordancampbell  txt       REG                1,4      32768  8497476 /Users/jordancampbell/Library/Application Support/AddressBook/Sources/482F4946-CE9B-47C5-B04C-49C8E5A0BE23/AddressBook-v22.abcddb-shm
+callservi   319 jordancampbell  txt       REG                1,4      32768  6997778 /Users/jordancampbell/Library/Application Support/AddressBook/AddressBook-v22.abcddb-shm
+callservi   319 jordancampbell  txt       REG                1,4     625952 18274976 /System/Library/PrivateFrameworks/NearField.framework/Versions/A/NearField
+callservi   319 jordancampbell  txt       REG                1,4     639968 18276122 /usr/lib/libnfshared.dylib
+callservi   319 jordancampbell  txt       REG                1,4      71828  8404876 /System/Library/PrivateFrameworks/PhoneNumbers.framework/Versions/A/Resources/Default.phoneformat
+callservi   319 jordancampbell  txt       REG                1,4      32768  6998004 /Users/jordancampbell/Library/Application Support/CallHistoryDB/CallHistory.storedata-shm
+callservi   319 jordancampbell  txt       REG                1,4      32768 25382873 /private/var/db/mds/messages/502/se_SecurityMessages
+callservi   319 jordancampbell  txt       REG                1,4      84288 18266794 /System/Library/Extensions/AppleHDA.kext/Contents/PlugIns/AppleHDAHALPlugIn.bundle/Contents/MacOS/AppleHDAHALPlugIn
+callservi   319 jordancampbell  txt       REG                1,4     698896 18276107 /usr/lib/dyld
+callservi   319 jordancampbell  txt       REG                1,4  662372352 24860468 /private/var/db/dyld/dyld_shared_cache_x86_64h
+callservi   319 jordancampbell    0r      CHR                3,2        0t0      304 /dev/null
+callservi   319 jordancampbell    1u      CHR                3,2        0t0      304 /dev/null
+callservi   319 jordancampbell    2u      CHR                3,2     0t3411      304 /dev/null
+callservi   319 jordancampbell    3u      REG                1,4          0 25382878 /private/var/folders/mr/wbk9tgzx4_l7p47_zz62qdp40000gp/T/.AddressBookLocks/database.lock
+callservi   319 jordancampbell    4u      REG                1,4     389120  8497471 /Users/jordancampbell/Library/Application Support/AddressBook/Sources/482F4946-CE9B-47C5-B04C-49C8E5A0BE23/AddressBook-v22.abcddb
+callservi   319 jordancampbell    5u      REG                1,4    1507952  8497475 /Users/jordancampbell/Library/Application Support/AddressBook/Sources/482F4946-CE9B-47C5-B04C-49C8E5A0BE23/AddressBook-v22.abcddb-wal
+callservi   319 jordancampbell    6u      REG                1,4      32768  8497476 /Users/jordancampbell/Library/Application Support/AddressBook/Sources/482F4946-CE9B-47C5-B04C-49C8E5A0BE23/AddressBook-v22.abcddb-shm
+callservi   319 jordancampbell    7u      REG                1,4     475136  6997773 /Users/jordancampbell/Library/Application Support/AddressBook/AddressBook-v22.abcddb
+callservi   319 jordancampbell    8u      REG                1,4      78312  6997777 /Users/jordancampbell/Library/Application Support/AddressBook/AddressBook-v22.abcddb-wal
+callservi   319 jordancampbell    9u      REG                1,4      32768  6997778 /Users/jordancampbell/Library/Application Support/AddressBook/AddressBook-v22.abcddb-shm
+callservi   319 jordancampbell   10   NPOLICY                                        
+callservi   319 jordancampbell   11u      REG                1,4          0 25384806 /private/var/folders/mr/wbk9tgzx4_l7p47_zz62qdp40000gp/T/.AddressBookLocks/_Users_jordancampbell_Library_Application Support_AddressBook_Metadata_.MetaData.lock_lock
+callservi   319 jordancampbell   12u      REG                1,4      36864  6997972 /Users/jordancampbell/Library/Application Support/CallHistoryDB/CallHistory.storedata
+callservi   319 jordancampbell   13u      REG                1,4      20632  6998003 /Users/jordancampbell/Library/Application Support/CallHistoryDB/CallHistory.storedata-wal
+callservi   319 jordancampbell   14u      REG                1,4      32768  6998004 /Users/jordancampbell/Library/Application Support/CallHistoryDB/CallHistory.storedata-shm
+sharedfil   321 jordancampbell  cwd       DIR                1,4       1224        2 /
+sharedfil   321 jordancampbell  txt       REG                1,4     128048  8240256 /System/Library/CoreServices/sharedfilelistd
+sharedfil   321 jordancampbell  txt       REG                1,4      32768 25049083 /private/var/db/mds/messages/502/se_SecurityMessages
+sharedfil   321 jordancampbell  txt       REG                1,4     372688 18273581 /System/Library/Frameworks/Security.framework/Versions/A/PlugIns/csparser.bundle/Contents/MacOS/csparser
+sharedfil   321 jordancampbell  txt       REG                1,4   25923264 11805497 /usr/share/icu/icudt57l.dat
+sharedfil   321 jordancampbell  txt       REG                1,4     698896 18276107 /usr/lib/dyld
+sharedfil   321 jordancampbell  txt       REG                1,4  662372352 24860468 /private/var/db/dyld/dyld_shared_cache_x86_64h
+sharedfil   321 jordancampbell    0r      CHR                3,2        0t0      304 /dev/null
+sharedfil   321 jordancampbell    1u      CHR                3,2        0t0      304 /dev/null
+sharedfil   321 jordancampbell    2u      CHR                3,2        0t0      304 /dev/null
+identitys   323 jordancampbell  cwd       DIR                1,4       1224        2 /
+identitys   323 jordancampbell  txt       REG                1,4    7841728  8393402 /System/Library/PrivateFrameworks/IDS.framework/identityservicesd.app/Contents/MacOS/identityservicesd
+identitys   323 jordancampbell  txt       REG                1,4     625952 18274976 /System/Library/PrivateFrameworks/NearField.framework/Versions/A/NearField
+identitys   323 jordancampbell  txt       REG                1,4      32768 25382873 /private/var/db/mds/messages/502/se_SecurityMessages
+identitys   323 jordancampbell  txt       REG                1,4     639968 18276122 /usr/lib/libnfshared.dylib
+identitys   323 jordancampbell  txt       REG                1,4   25923264 11805497 /usr/share/icu/icudt57l.dat
+identitys   323 jordancampbell  txt       REG                1,4      32768  6997945 /Users/jordancampbell/Library/IdentityServices/ids.db-shm
+identitys   323 jordancampbell  txt       REG                1,4      71828  8404876 /System/Library/PrivateFrameworks/PhoneNumbers.framework/Versions/A/Resources/Default.phoneformat
+identitys   323 jordancampbell  txt       REG                1,4      32768  8497853 /Users/jordancampbell/Library/IdentityServices/ids-hashes-identityservicesd.db-shm
+identitys   323 jordancampbell  txt       REG                1,4     698896 18276107 /usr/lib/dyld
+identitys   323 jordancampbell  txt       REG                1,4  662372352 24860468 /private/var/db/dyld/dyld_shared_cache_x86_64h
+identitys   323 jordancampbell    0r      CHR                3,2        0t0      304 /dev/null
+identitys   323 jordancampbell    1u      CHR                3,2        0t0      304 /dev/null
+identitys   323 jordancampbell    2u      CHR                3,2        0t0      304 /dev/null
+identitys   323 jordancampbell    3   NPOLICY                                        
+identitys   323 jordancampbell    4r      CHR               14,0     0t7328      578 /dev/random
+identitys   323 jordancampbell    5u     unix 0xb1668391519ff147        0t0          ->0xb1668391519ff20f
+identitys   323 jordancampbell    6u     unix 0xb1668391519ff20f        0t0          ->0xb1668391519ff147
+identitys   323 jordancampbell    7u   KQUEUE                                        count=0, state=0xa
+identitys   323 jordancampbell    8u     unix 0xb1668391519ff2d7        0t0          ->0xb1668391519fe337
+identitys   

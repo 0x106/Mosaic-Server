@@ -279,7 +279,7 @@ async function getData(url) {
   // });
 
   await page.setViewport({
-  	width: 1536,
+  	width: 1200,
   	height: 1080
   });
 
