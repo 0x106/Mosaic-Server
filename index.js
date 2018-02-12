@@ -107,7 +107,11 @@ let parse = function(snapshot) {
     var attr = dom[ currentNode ]['attributes']
 
     if (!attr) {
-      attr = [{'atlas':'reality'}]
+	attr = [{
+		'name':'atlas', 
+		'value':'reality'
+	        }
+	       ]
     }
 
     if (!pkey) {
@@ -117,7 +121,12 @@ let parse = function(snapshot) {
     if (nodeStyle) {
       nodeStyle = nodeStyle['properties']
     } else {
-      nodeStyle = [{'atlas':'reality'}]
+	//nodeStyle = [{'atlas':'reality'}]
+	nodeStyle = [{
+		      'name':'atlas', 
+		      'value':'reality'
+	             }
+	            ]
     }
 
     var node = {
@@ -279,7 +288,7 @@ async function getData(url) {
   // });
 
   await page.setViewport({
-  	width: 1200,
+  	width: 1400,
   	height: 1080
   });
 
