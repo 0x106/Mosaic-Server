@@ -1,6 +1,8 @@
 var app = require('express')();
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
+var fs = require('fs');
+
 const puppeteer = require('puppeteer');
 const fonts = require('./fonts.json')
 
@@ -108,7 +110,7 @@ let parse = function(snapshot) {
 
     if (!attr) {
 	attr = [{
-		'name':'atlas', 
+		'name':'atlas',
 		'value':'reality'
 	        }
 	       ]
@@ -123,7 +125,7 @@ let parse = function(snapshot) {
     } else {
 	//nodeStyle = [{'atlas':'reality'}]
 	nodeStyle = [{
-		      'name':'atlas', 
+		      'name':'atlas',
 		      'value':'reality'
 	             }
 	            ]
@@ -147,7 +149,6 @@ let parse = function(snapshot) {
   return [nodeData, nodeKeys]
 }
 
-
 io.on('connection', function(socket) {
 
    console.log('connection on server established ...');
@@ -160,6 +161,13 @@ io.on('connection', function(socket) {
 
    socket.on('url', function(url) {
       console.log(`url recvd: ${url}`);
+
+      fs.readFile('config.json', function(err, data){
+        data = JSON.parse(data);
+        io.emit('config', data)
+      });
+
+
       getData(url).then( function(snapshot) {
 
         io.emit('renderTreeStart')

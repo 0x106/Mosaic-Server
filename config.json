@@ -1,0 +1,20 @@
+{
+	"-myfirstdiv": {
+		"isVisible": "true",
+		 "position": "(100, 0, 0)",
+		 "rotation": "(0, 0.7854, 0)",
+		 "scale": "(0.1, 1, 0.5)",
+		 "background-color": "(73, 91, 73)",
+		 "border-top-color": "(34, 73, 73)",
+		 "border-left-color": "(82, 34, 34, 0.5)",
+		 "border-right-color": "(41, 82, 82)",
+		 "border-bottom-color": "(85, 41, 85)",
+		 "color": "(245, 93, 62)"
+	},
+	"-div02": {
+		 "rotation": "(0, 0, 0)"
+	},
+	"-div03": {
+		 "scale": "(0, 0, 0)"
+	}
+}
