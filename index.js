@@ -162,13 +162,14 @@ io.on('connection', function(socket) {
    socket.on('url', function(url) {
       console.log(`url recvd: ${url}`);
 
-      fs.readFile('config.json', function(err, data){
-        data = JSON.parse(data);
-        io.emit('config', data)
-      });
-
-
       getData(url).then( function(snapshot) {
+
+        var configFileName = snapshot["atlasID"] + ".json"
+        console.log(`Reading from config file: ${configFileName}`);
+        fs.readFile(configFileName, function(err, data){
+          data = JSON.parse(data);
+          io.emit('config', data)
+        });
 
         io.emit('renderTreeStart')
 
@@ -279,6 +280,16 @@ function computeRenderTree(snapshot) {
   return nodeData
 }
 
+function getAtlasID(atlas) {
+  var atlasStyleID = atlas["attributes"]
+  for (var i = 0; i < atlas["attributes"].length; i++) {
+    if(atlas["attributes"][i]["name"] == 'id') {
+      return atlas["attributes"][i]["value"]
+    }
+  }
+  return ""
+}
+
 async function getData(url) {
 
   console.time("headlessChrome-total");
@@ -317,6 +328,11 @@ async function getData(url) {
                       ];
 
   const snapshot = await page._client.send('DOMSnapshot.getSnapshot', {computedStyleWhitelist:computedStyles});
+
+  const doc = await page._client.send('DOM.getDocument')
+  const atlasNode = await page._client.send('DOM.querySelector', {nodeId: doc.root.nodeId, selector: 'atlas'})
+  snapshot["atlasID"] = getAtlasID( (snapshot['domNodes'][atlasNode["nodeId"]-1]) )
+
   console.timeEnd("getDOM");
   await browser.close()
   console.timeEnd("headlessChrome-total");
