@@ -11,10 +11,19 @@
 		 "border-bottom-color": "(85, 41, 85)",
 		 "color": "(245, 93, 62)"
 	},
-	"-div02": {
-		 "rotation": "(0, 0, 0)"
+	"-model01": {
+		 "filename": ""
 	},
-	"-div03": {
-		 "scale": "(0, 0, 0)"
+	"-model02": {
+		 "filename": ""
+	},
+	"-model03": {
+		 "filename": ""
+	},
+	"-model04": {
+		 "filename": ""
+	},
+	"-model05": {
+		 "filename": ""
 	}
 }

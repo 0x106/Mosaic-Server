@@ -164,12 +164,17 @@ io.on('connection', function(socket) {
 
       getData(url).then( function(snapshot) {
 
-        var configFileName = snapshot["atlasID"] + ".json"
-        console.log(`Reading from config file: ${configFileName}`);
-        fs.readFile(configFileName, function(err, data){
-          data = JSON.parse(data);
-          io.emit('config', data)
-        });
+        if (snapshot["atlasID"] != "") {
+          var configFileName = snapshot["atlasID"] + ".json"
+          console.log(`Reading from config file: ${configFileName}`);
+          fs.readFile(configFileName, function(err, data){
+            data = JSON.parse(data);
+            socket.emit('config', data, function(response) {
+              // should execute this code when the client receives this data
+              console.log("config emit ack received");
+            });
+          });
+        }
 
         io.emit('renderTreeStart')
 
@@ -183,7 +188,7 @@ io.on('connection', function(socket) {
         var renderTree = [];
         var ptr = 0;
         data[keys[ptr]]['depth'] = 0
-        io.emit('node', data[ keys[ptr] ]  )
+        socket.emit('node', data[ keys[ptr] ]  )
         renderTree.push( keys[ptr] )
 
         while(ptr < renderTree.length) {
@@ -200,14 +205,14 @@ io.on('connection', function(socket) {
                     if ( data[children[i]] ) {
                         renderTree.push(children[i]);
                         data[children[i]]['depth'] = data[ next ]['depth'] + 1
-                        io.emit('node', data[children[i]]  )
+                        socket.emit('node', data[children[i]]  )
                     }
                 }
             }
             ptr += 1
         }
 
-        io.emit('renderTreeComplete')
+        socket.emit('renderTreeComplete')
 
         // console.log(renderTree);
         console.log("Processing complete.");
@@ -281,10 +286,13 @@ function computeRenderTree(snapshot) {
 }
 
 function getAtlasID(atlas) {
-  var atlasStyleID = atlas["attributes"]
-  for (var i = 0; i < atlas["attributes"].length; i++) {
-    if(atlas["attributes"][i]["name"] == 'id') {
-      return atlas["attributes"][i]["value"]
+  if (atlas === undefined) {
+  } else {
+    var atlasStyleID = atlas["attributes"]
+    for (var i = 0; i < atlas["attributes"].length; i++) {
+      if(atlas["attributes"][i]["name"] == 'id') {
+        return atlas["attributes"][i]["value"]
+      }
     }
   }
   return ""
