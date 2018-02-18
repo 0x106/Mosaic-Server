@@ -13,7 +13,14 @@
 	},
 	"-model01": {
 		 "filename": "",
-		 "position": "(-642,0,0)"
+		 "position": "(0,0,0)",
+		 "onTap": {
+			 "command": "changeBy",
+			 "component": "",
+			 "property": "rotation",
+			 "value": "(0, 6.28, 0)",
+			 "duration": "4.0"
+		 }
 	},
 	"-model02": {
 		 "filename": ""

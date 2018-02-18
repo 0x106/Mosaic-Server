@@ -170,11 +170,15 @@ io.on('connection', function(socket) {
 
         if (snapshot["atlas"]["filename"] != "") {
           var configFileName = snapshot["atlas"]["filename"] + ".json"
-          fs.readFile(configFileName, function(err, data){
-            data = JSON.parse(data);
+          fs.readFile(configFileName, function(read_err, data){
+
+            try {
+              data = JSON.parse(data);
+            } catch(parse_error) {
+              sendData(snapshot, socket)
+            }
             socket.emit('config', data, function(response) {
               sendData(snapshot, socket)
-
             });
           });
         } else {
@@ -239,7 +243,7 @@ async function getData(url) {
                         'padding-left', 'padding-right', 'padding-top', 'padding-bottom',
                         'background-image',
                         'font-family', 'font-weight',
-                        'display'
+                        'display', 'visibility'
                       ];
 
   const snapshot = await page._client.send('DOMSnapshot.getSnapshot', {computedStyleWhitelist:computedStyles});
