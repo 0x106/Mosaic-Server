@@ -149,6 +149,49 @@ let parse = function(snapshot) {
   return [nodeData, nodeKeys]
 }
 
+function sendData(snapshot, socket) {
+  io.emit('renderTreeStart')
+
+  console.time("parse");
+  var parsed = parse(snapshot)
+  var data = parsed[0]
+  var keys = parsed[1]
+  console.timeEnd("parse");
+
+  console.time("renderTree");
+  var renderTree = [];
+  var ptr = 0;
+  data[keys[ptr]]['depth'] = 0
+  socket.emit('node', data[ keys[ptr] ]  )
+  renderTree.push( keys[ptr] )
+
+  while(ptr < renderTree.length) {
+      // get the next key
+      var next = renderTree[ ptr ]
+
+      // get the list of child keys for this node
+      var children = data[ next ]['nodeChildren']
+      if (children) {
+
+          // for each of the child keys
+          for (var i = 0; i < children.length; i++) {
+
+              if ( data[children[i]] ) {
+                  renderTree.push(children[i]);
+                  data[children[i]]['depth'] = data[ next ]['depth'] + 1
+                  socket.emit('node', data[children[i]]  )
+              }
+          }
+      }
+      ptr += 1
+  }
+
+  socket.emit('renderTreeComplete')
+
+  // console.log(renderTree);
+  console.log("Processing complete.");
+}
+
 io.on('connection', function(socket) {
 
    console.log('connection on server established ...');
@@ -164,58 +207,22 @@ io.on('connection', function(socket) {
 
       getData(url).then( function(snapshot) {
 
-        if (snapshot["atlasID"] != "") {
-          var configFileName = snapshot["atlasID"] + ".json"
+        if (snapshot["atlas"]["filename"] != "") {
+          var configFileName = snapshot["atlas"]["filename"] + ".json"
           console.log(`Reading from config file: ${configFileName}`);
           fs.readFile(configFileName, function(err, data){
             data = JSON.parse(data);
             socket.emit('config', data, function(response) {
               // should execute this code when the client receives this data
               console.log("config emit ack received");
+
+              sendData(snapshot, socket)
+
             });
           });
+        } else {
+          sendData(snapshot, socket)
         }
-
-        io.emit('renderTreeStart')
-
-        console.time("parse");
-        var parsed = parse(snapshot)
-        var data = parsed[0]
-        var keys = parsed[1]
-        console.timeEnd("parse");
-
-        console.time("renderTree");
-        var renderTree = [];
-        var ptr = 0;
-        data[keys[ptr]]['depth'] = 0
-        socket.emit('node', data[ keys[ptr] ]  )
-        renderTree.push( keys[ptr] )
-
-        while(ptr < renderTree.length) {
-            // get the next key
-            var next = renderTree[ ptr ]
-
-            // get the list of child keys for this node
-            var children = data[ next ]['nodeChildren']
-            if (children) {
-
-                // for each of the child keys
-                for (var i = 0; i < children.length; i++) {
-
-                    if ( data[children[i]] ) {
-                        renderTree.push(children[i]);
-                        data[children[i]]['depth'] = data[ next ]['depth'] + 1
-                        socket.emit('node', data[children[i]]  )
-                    }
-                }
-            }
-            ptr += 1
-        }
-
-        socket.emit('renderTreeComplete')
-
-        // console.log(renderTree);
-        console.log("Processing complete.");
 
       });
    });
@@ -285,13 +292,28 @@ function computeRenderTree(snapshot) {
   return nodeData
 }
 
+function getAtlas(snapshot) {
+  atlas = {}
+  for (var i = 0; i < snapshot["domNodes"].length; i++) {
+    console.log(`Node: ${snapshot["domNodes"][i]["nodeName"]}`)
+    if (snapshot["domNodes"][i]["nodeName"] == "ATLAS") {
+      atlas['data'] = snapshot["domNodes"][i]
+      return atlas
+    }
+  }
+  return ""
+}
+
 function getAtlasID(atlas) {
+  console.log(`Searching for filename: ${atlas}`)
   if (atlas === undefined) {
   } else {
     var atlasStyleID = atlas["attributes"]
-    for (var i = 0; i < atlas["attributes"].length; i++) {
-      if(atlas["attributes"][i]["name"] == 'id') {
-        return atlas["attributes"][i]["value"]
+    if (atlasStyleID) {
+      for (var i = 0; i < atlas["attributes"].length; i++) {
+        if(atlas["attributes"][i]["name"] == 'id') {
+          return atlas["attributes"][i]["value"]
+        }
       }
     }
   }
@@ -336,10 +358,13 @@ async function getData(url) {
                       ];
 
   const snapshot = await page._client.send('DOMSnapshot.getSnapshot', {computedStyleWhitelist:computedStyles});
-
-  const doc = await page._client.send('DOM.getDocument')
-  const atlasNode = await page._client.send('DOM.querySelector', {nodeId: doc.root.nodeId, selector: 'atlas'})
-  snapshot["atlasID"] = getAtlasID( (snapshot['domNodes'][atlasNode["nodeId"]-1]) )
+  // const doc = await page._client.send('DOM.getDocument')
+  // const atlasNode = await page._client.send('DOM.querySelector', {nodeId: doc.root.nodeId, selector: 'atlas'})
+  // s
+  snapshot["atlas"] = getAtlas(snapshot)
+  snapshot["atlas"]["filename"] = getAtlasID( snapshot["atlas"]["data"] )
+  console.log(  `atlas-file: ${snapshot["atlas"]["filename"]}` );
+  console.log(  `atlas: ${snapshot["atlas"]}` );
 
   console.timeEnd("getDOM");
   await browser.close()

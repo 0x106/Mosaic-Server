@@ -2,8 +2,8 @@
 	"-myfirstdiv": {
 		"isVisible": "true",
 		 "position": "(100, 0, 0)",
-		 "rotation": "(0, 0.7854, 0)",
-		 "scale": "(0.1, 1, 0.5)",
+		 "rotation": "(0, 0, 0)",
+		 "scale": "(1, 1, 1)",
 		 "background-color": "(73, 91, 73)",
 		 "border-top-color": "(34, 73, 73)",
 		 "border-left-color": "(82, 34, 34, 0.5)",
@@ -12,7 +12,8 @@
 		 "color": "(245, 93, 62)"
 	},
 	"-model01": {
-		 "filename": ""
+		 "filename": "",
+		 "position": "(-642,0,0)"
 	},
 	"-model02": {
 		 "filename": ""
