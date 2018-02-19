@@ -126,7 +126,7 @@ let parse = function(snapshot) {
 }
 
 function sendData(snapshot, socket) {
-  io.emit('renderTreeStart')
+  socket.emit('renderTreeStart')
   var parsed = parse(snapshot)
   var data = parsed[0]
   var keys = parsed[1]
@@ -135,34 +135,45 @@ function sendData(snapshot, socket) {
   var ptr = 0;
   data[keys[ptr]]['depth'] = 0
   socket.emit('node', data[ keys[ptr] ]  )
+
+  var shadowTree = {}
+
   renderTree.push( keys[ptr] )
 
   while(ptr < renderTree.length) {
-      var next = renderTree[ ptr ]
+      var parentKey = renderTree[ ptr ]
+      shadowTree[parentKey] = {}
 
-      var children = data[ next ]['nodeChildren']
+      var children = data[ parentKey ]['nodeChildren']
       if (children) {
 
           for (var i = 0; i < children.length; i++) {
 
               if ( data[children[i]] ) {
-                  renderTree.push(children[i]);
-                  data[children[i]]['depth'] = data[ next ]['depth'] + 1
+
+                  data[children[i]]['depth'] = data[ parentKey ]['depth'] + 1
                   socket.emit('node', data[children[i]]  )
+
+                  renderTree.push(children[i]);
+                  shadowTree[ parentKey ][children[i]] = {}
               }
           }
       }
       ptr += 1
   }
 
-  socket.emit('renderTreeComplete')
+  var shadowTreeData = {}
+  shadowTreeData["shadowTree"] = shadowTree
+  shadowTreeData["root"] = renderTree[0]
+
+  socket.emit('renderTreeComplete', shadowTreeData)
 }
 
 io.on('connection', function(socket) {
 
    console.log('connection on server established ...');
 
-   io.emit('response', "Connection successful")
+   socket.emit('response', "Connection successful")
 
    socket.on('url', function(url) {
 

@@ -15,15 +15,22 @@
 		 "filename": "",
 		 "position": "(0,0,0)",
 		 "onTap": {
-			 "command": "changeBy",
-			 "component": "",
-			 "property": "rotation",
-			 "value": "(0, 6.28, 0)",
-			 "duration": "4.0"
-		 }
+ 			"property": "rotation",
+ 			"command": "changeBy",
+ 			"value": "(0, 2.28, 0)",
+ 			"duration": "4.0"
+ 		}
 	},
 	"-model02": {
 		 "filename": ""
+	},
+	"-p01": {
+		"onTap": {
+			"property": "border-top-color",
+			"command": "changeBy",
+			"value": "(0, 255, 0)",
+			"duration": "4.0"
+		}
 	},
 	"-model03": {
 		 "filename": ""
