@@ -140,6 +140,8 @@ function sendData(snapshot, socket) {
 
   renderTree.push( keys[ptr] )
 
+  console.log("Sending render tree...");
+
   while(ptr < renderTree.length) {
       var parentKey = renderTree[ ptr ]
       shadowTree[parentKey] = {}
@@ -166,6 +168,8 @@ function sendData(snapshot, socket) {
   shadowTreeData["shadowTree"] = shadowTree
   shadowTreeData["root"] = renderTree[0]
 
+  console.log("Render tree sent...");
+
   socket.emit('renderTreeComplete', shadowTreeData)
 }
 
@@ -184,7 +188,8 @@ io.on('connection', function(socket) {
           fs.readFile(configFileName, function(read_err, data){
 
             try {
-              data = JSON.parse(data);
+      	      data = JSON.parse(data);
+      	      console.log("Read config file...");
             } catch(parse_error) {
               sendData(snapshot, socket)
             }
@@ -233,6 +238,8 @@ function getAtlas(snapshot) {
 
 async function getData(url) {
 
+  console.log("Initialising page retrieval");
+
   const browser = await puppeteer.launch()
   const page = await browser.newPage()
 
@@ -257,8 +264,13 @@ async function getData(url) {
                         'display', 'visibility'
                       ];
 
+
+  console.log("Retrieving webpage...");
+
   const snapshot = await page._client.send('DOMSnapshot.getSnapshot', {computedStyleWhitelist:computedStyles});
   snapshot["atlas"] = getAtlas(snapshot)
+
+  console.log("Retrieved data...");
 
   await browser.close()
   return snapshot
